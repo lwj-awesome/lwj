@@ -1,4 +1,5 @@
 import styles from "./page.module.css";
+
 export default function Home() {
   return (
     <div className={styles.layout}>
@@ -35,15 +36,25 @@ export default function Home() {
         </article>
       </section>
 
-      <section className={`${styles.sectionBlock} ${styles.project}`}>
-        <article className={styles.project_desc}>
+      <section className={`${styles.project} ${styles.sectionBlock}`}>
+        <article className={styles.project_desc_sticky}>
           <h1>A B C D E F G H I J K L M</h1>
           <p>
             Elevating brands through creative digital solutions, proudly
             representing Lisbon's vibrant innovation.
           </p>
         </article>
-        <article className={styles.project_image}>스크롤박스가들어갈것</article>
+        <article className={styles.project_box_layer}>
+          <article className={styles.project_image}>프로젝트</article>
+          <div className={styles.project_second_box}>
+            <article className={styles.project_image}>프로젝트</article>
+            <article className={styles.project_image}>프로젝트</article>
+          </div>
+          <div className={styles.project_second_box}>
+            <article className={styles.project_image}>프로젝트</article>
+            <article className={styles.project_image}>프로젝트</article>
+          </div>
+        </article>
       </section>
     </div>
   );
