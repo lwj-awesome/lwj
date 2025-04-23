@@ -1,9 +1,14 @@
+.sectionBlock {
+  padding: 2rem 0;
+  border-bottom: 1px solid silver;
+}
+
 .layout {
-  border: 1px solid silver;
   margin: 2rem;
   /* 임시 스타일 후에 삭제 */
   min-height: 100vh;
   padding: 2rem;
+  border: 1px solid silver;
 }
 
 .header {
@@ -11,16 +16,14 @@
   justify-content: flex-end;
   gap: 2rem;
   width: 90vw;
-  border-bottom: 1px solid silver;
   padding-bottom: 2rem;
+  border-bottom: 1px solid silver;
 }
 
 /*  intro */
 .intro {
-  padding: 2rem 0;
   display: flex;
   gap: 3rem;
-  border-bottom: 1px solid silver;
 }
 
 .intro_desc {
@@ -37,6 +40,36 @@
 }
 
 .intro_image {
+  border: 1px solid silver;
+  width: 50vw;
+  height: 40vw;
+}
+
+.marquee {
+  padding: 2rem 0;
+  border-bottom: 1px solid silver;
+}
+/* experience */
+
+.experience {
+  display: flex;
+  gap: 3rem;
+}
+.experience_desc {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  width: 50vw;
+}
+
+.experience_desc > h1 {
+  font-size: 5rem;
+}
+.experience_desc > p {
+  font-size: 2rem;
+}
+
+.experience_image {
   border: 1px solid silver;
   width: 50vw;
   height: 40vw;
