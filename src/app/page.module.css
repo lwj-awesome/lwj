@@ -1,0 +1,43 @@
+.layout {
+  border: 1px solid silver;
+  margin: 2rem;
+  /* 임시 스타일 후에 삭제 */
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
+  width: 90vw;
+  border-bottom: 1px solid silver;
+  padding-bottom: 2rem;
+}
+
+/*  intro */
+.intro {
+  padding: 2rem 0;
+  display: flex;
+  gap: 3rem;
+  border-bottom: 1px solid silver;
+}
+
+.intro_desc {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  width: 50vw;
+}
+.intro_desc > h1 {
+  font-size: 5rem;
+}
+.intro_desc > p {
+  font-size: 2rem;
+}
+
+.intro_image {
+  border: 1px solid silver;
+  width: 50vw;
+  height: 40vw;
+}
