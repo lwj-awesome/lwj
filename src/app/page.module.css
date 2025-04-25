@@ -1,12 +1,10 @@
 .sectionBlock {
-  padding: 2rem 0;
-  border-bottom: 1px solid silver;
+  /* padding: 2rem 0; */
 }
 
 .layout {
-  margin: 2rem;
   min-height: 100vh;
-  padding: 2rem;
+  /* padding: 2rem; */
   border: 1px solid silver;
 }
 
@@ -22,14 +20,18 @@
 /*  intro */
 .intro {
   display: flex;
-  gap: 3rem;
+  /* gap: 3rem; */
+  height: 300vh;
 }
-
+/* 
 .intro_desc {
   display: flex;
   flex-direction: column;
   gap: 4rem;
   width: 50vw;
+  position: sticky;
+  top: 10%;
+  height: fit-content;
 }
 .intro_desc > h1 {
   font-size: 5rem;
@@ -42,7 +44,9 @@
   border: 1px solid silver;
   width: 50vw;
   height: 40vw;
-}
+  position: sticky;
+  top: 10%;
+} */
 
 .marquee {
   padding: 2rem 0;
