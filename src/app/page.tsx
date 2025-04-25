@@ -142,8 +142,8 @@ export default function Home() {
                 <div>SEP 13, 1993</div>
               </Project.Title>
               <Project.desc>
-                Samsung's Approach to Digital Product Design: A Seamless Blend
-                of UI/UX
+                Samsung Approach to Digital Product Design: A Seamless Blend of
+                UI/UX
               </Project.desc>
             </Project>
             <Project href="/detail">
@@ -153,8 +153,8 @@ export default function Home() {
                 <div>SEP 13, 1993</div>
               </Project.Title>
               <Project.desc>
-                Samsung's Approach to Digital Product Design: A Seamless Blend
-                of UI/UX
+                Samsung Approach to Digital Product Design: A Seamless Blend of
+                UI/UX
               </Project.desc>
             </Project>
           </article>
