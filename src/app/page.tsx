@@ -1,14 +1,21 @@
 "use client";
-/* eslint-disable react/no-unescaped-entities */
-import { VisibleSectionsProps } from "@/types/types";
 import styles from "./page.module.css";
 import { useEffect, useRef, useState } from "react";
-import { Intro } from "@/components/ui/intro";
+import MyPicture from "@/components/ui/my-picture/my-picture-intro";
+import { Intro } from "@/components/ui/intro/intro";
+import { VisibleSectionsProps } from "@/types/types";
+import Project from "@/components/ui/my-project/my-project";
+import Header from "@/components/ui/header/header";
+import InduceScroll from "@/components/ui/induce-scroll/induce-scroll";
+import Marquee from "@/components/ui/marquee/marquee";
+import Experience from "@/components/ui/experience/experience";
 
 export default function Home() {
   const introRef = useRef<HTMLDivElement | null>(null);
-  const projectRef = useRef<HTMLDivElement | null>(null);
+  const myPictureRef = useRef<HTMLDivElement | null>(null);
+  const ProjectRef = useRef<HTMLDivElement | null>(null);
   const experienceRef = useRef<HTMLDivElement | null>(null);
+  const induceScrollRef = useRef<HTMLDivElement | null>(null);
   const [visibleSections, setVisibleSections] =
     useState<VisibleSectionsProps[]>();
 
@@ -16,8 +23,10 @@ export default function Home() {
     const handleScroll = () => {
       const sections = [
         { ref: experienceRef, id: "experience" },
-        { ref: projectRef, id: "project" },
+        { ref: myPictureRef, id: "myPicture" },
+        { ref: ProjectRef, id: "project" },
         { ref: introRef, id: "intro" },
+        { ref: induceScrollRef, id: "induceScroll" },
       ];
 
       // 각 섹션의 스크롤 위치 저장
@@ -58,76 +67,99 @@ export default function Home() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  return (
-    <div className={styles.layout}>
-      <header className={styles.header}>
-        <p>INTRO</p>
-        <p>EXPERIENCE</p>
-        <p>PROJECT</p>
-      </header>
 
-      <section
-        ref={introRef}
-        className={`${styles.intro} ${styles.sectionBlock}`}
-      >
+  const isMyPictureVisible = visibleSections?.[0]?.["myPicture"];
+  const myPictureSection = ` ${styles.section} ${
+    isMyPictureVisible ? styles.visible : ""
+  }`;
+
+  const isProjectVisible = visibleSections?.[0]?.["project"];
+  const projectSection = `${styles.section} ${
+    isProjectVisible ? styles.visible : ""
+  }`;
+
+  const moveToExperience = () => {
+    experienceRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+  const moveToProject = () => {
+    ProjectRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+  const moveToIntro = () => {
+    induceScrollRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  return (
+    <>
+      <Header
+        moveToExperience={moveToExperience}
+        moveToProject={moveToProject}
+        moveToIntro={moveToIntro}
+      />
+      <section ref={induceScrollRef}>
+        <InduceScroll />
+      </section>
+      <section ref={introRef} className={styles.intro}>
         {visibleSections?.[0]?.["intro"] && (
           <Intro visibleSections={visibleSections} />
         )}
-        {/* <article className={styles.intro_desc}>
-          <h1>A B C D E F G H I J K L M</h1>
-          <p>
-            Elevating brands through creative digital solutions, proudly
-            representing Lisbon's vibrant innovationss.
-          </p>
+      </section>
+      <section className={myPictureSection} ref={myPictureRef}>
+        <article className={styles.my_picture}>
+          <MyPicture visibleSections={visibleSections} />
         </article>
-        <div className={styles.intro_image}>
-          {visibleSections?.[0]?.["intro"] && (
-            <ImageScroll
-              scrollHeight={visibleSections?.[0]["intro"].sectionHeight}
-              scrollY={visibleSections?.[0]["intro"].scrollPosition}
-              startRatio={0}
-              endRatio={1}
-              src="images/see.jpg"
-            />
+      </section>
+      <Marquee />
+
+      <section className={styles.experience} ref={experienceRef}>
+        <article className={styles.experience_sticky}>
+          <div className={styles.experience_title}>
+            <h1>i blend creativity with</h1>
+            <h1>technical expertise</h1>
+          </div>
+          <div className={styles.experience_content}>
+            I’m dedicated to crafting websites that bring your ideas to life,
+            combining design and development to deliver fast, impactful results.
+          </div>
+        </article>
+        <article className={styles.experience_scroll}>
+          {visibleSections?.[0]?.["experience"] && (
+            <Experience visibleSections={visibleSections} />
           )}
-        </div> */}
-      </section>
-
-      <section className={styles.sectionBlock}>marquee position</section>
-
-      <section className={`${styles.experience} ${styles.sectionBlock}`}>
-        <article className={styles.experience_desc}>
-          <h1>A B C D E F G H I J K L M</h1>
-          <p>
-            Elevating brands through creative digital solutions, proudly
-            representing Lisbon's vibrant innovation.
-          </p>
-        </article>
-        <article className={styles.experience_image}>
-          스크롤박스가들어갈것
         </article>
       </section>
 
-      <section className={`${styles.project} ${styles.sectionBlock}`}>
-        <article className={styles.project_desc_sticky}>
-          <h1>A B C D E F G H I J K L M</h1>
-          <p>
-            Elevating brands through creative digital solutions, proudly
-            representing Lisbon's vibrant innovation.
-          </p>
-        </article>
-        <article className={styles.project_box_layer}>
-          <article className={styles.project_image}>프로젝트</article>
-          <div className={styles.project_second_box}>
-            <article className={styles.project_image}>프로젝트</article>
-            <article className={styles.project_image}>프로젝트</article>
+      <section ref={ProjectRef} className={projectSection}>
+        <article className={styles.project}>
+          <div className={styles.project_title}>
+            <span>CASE STUDY</span>
+            <h1>A B C D E F G</h1>
           </div>
-          <div className={styles.project_second_box}>
-            <article className={styles.project_image}>프로젝트</article>
-            <article className={styles.project_image}>프로젝트</article>
-          </div>
+          <article className={styles.project_box}>
+            <Project href="/detail">
+              <Project.Image />
+              <Project.Title>
+                <div>project</div>
+                <div>SEP 13, 1993</div>
+              </Project.Title>
+              <Project.desc>
+                Samsung's Approach to Digital Product Design: A Seamless Blend
+                of UI/UX
+              </Project.desc>
+            </Project>
+            <Project href="/detail">
+              <Project.Image />
+              <Project.Title>
+                <div>project</div>
+                <div>SEP 13, 1993</div>
+              </Project.Title>
+              <Project.desc>
+                Samsung's Approach to Digital Product Design: A Seamless Blend
+                of UI/UX
+              </Project.desc>
+            </Project>
+          </article>
         </article>
       </section>
-    </div>
+    </>
   );
 }

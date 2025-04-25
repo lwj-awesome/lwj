@@ -5,3 +5,7 @@ export interface VisibleSectionsProps {
     scrollPosition: number;
   };
 }
+
+export interface CommonComponentsProps {
+  children: React.ReactNode;
+}

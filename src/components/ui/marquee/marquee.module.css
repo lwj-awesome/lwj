@@ -1,0 +1,54 @@
+.marquee_wrapper {
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 2rem;
+  position: relative;
+  height: 10vh;
+
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  /* ✅ 흐려지는 마스크 추가 */
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+}
+
+.marquee {
+  display: flex;
+  flex-direction: row;
+  gap: 8rem;
+  animation: scroll-left 50s linear infinite;
+  font-size: 3rem;
+  will-change: transform;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@media (max-width: 880px) {
+  .marquee_wrapper {
+    padding: 0.6rem;
+  }
+
+  .marquee {
+    font-size: 2.2rem;
+    animation: scroll-left 20s linear infinite;
+  }
+}

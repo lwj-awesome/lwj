@@ -1,0 +1,40 @@
+.project_content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 42vw;
+}
+
+.project_imageLayout {
+  border: 1px solid gray;
+  border-radius: 12px;
+  height: 32rem;
+}
+
+.project_title {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.project_description {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+@media (max-width: 880px) {
+  .project_content {
+    width: 100%;
+  }
+
+  .project_imageLayout {
+    height: 25rem;
+  }
+
+  .project_description {
+    line-height: 2rem;
+    width: 100%;
+    font-size: 1rem;
+  }
+}
