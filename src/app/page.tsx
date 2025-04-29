@@ -1,99 +1,46 @@
 "use client";
 import styles from "./page.module.css";
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import MyPicture from "@/components/ui/my-picture/my-picture-intro";
 import { Intro } from "@/components/ui/intro/intro";
-import { VisibleSectionsProps } from "@/types/types";
 import Project from "@/components/ui/my-project/my-project";
 import Header from "@/components/ui/header/header";
 import InduceScroll from "@/components/ui/induce-scroll/induce-scroll";
 import Marquee from "@/components/ui/marquee/marquee";
 import Experience from "@/components/ui/experience/experience";
+import { useVisibleSections } from "@/hooks/useVisibleSections";
 
 export default function Home() {
   const introRef = useRef<HTMLDivElement | null>(null);
   const myPictureRef = useRef<HTMLDivElement | null>(null);
-  const ProjectRef = useRef<HTMLDivElement | null>(null);
+  const projectRef = useRef<HTMLDivElement | null>(null);
   const experienceRef = useRef<HTMLDivElement | null>(null);
   const induceScrollRef = useRef<HTMLDivElement | null>(null);
-  const [visibleSections, setVisibleSections] =
-    useState<VisibleSectionsProps[]>();
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const sections = [
-        { ref: experienceRef, id: "experience" },
-        { ref: myPictureRef, id: "myPicture" },
-        { ref: ProjectRef, id: "project" },
-        { ref: introRef, id: "intro" },
-        { ref: induceScrollRef, id: "induceScroll" },
-      ];
+  const sections = [
+    { ref: experienceRef, id: "experience" },
+    { ref: myPictureRef, id: "myPicture" },
+    { ref: projectRef, id: "project" },
+    { ref: introRef, id: "intro" },
+    { ref: induceScrollRef, id: "induceScroll" },
+  ];
+  const visibleSections = useVisibleSections(sections);
 
-      // 각 섹션의 스크롤 위치 저장
-      const sectionPositions: Record<string, number> = {};
-      sections.forEach(({ ref, id }) => {
-        if (ref.current) {
-          sectionPositions[id] =
-            ref.current.getBoundingClientRect().top + window.scrollY;
-        }
-      });
-
-      const visibleSections = sections
-        .map(({ ref, id }) => {
-          const rect = ref.current?.getBoundingClientRect();
-          if (!rect) return null;
-          // 화면 최상단을 지나간 섹션만 필터링
-          if (rect.top >= 0 || rect.bottom <= 0) return null;
-          // 내부 스크롤 위치 (0부터 시작)
-          const sectionHeight = rect.bottom - rect.top;
-          const scrollPosition = Math.min(
-            Math.max(-rect.top, 0),
-            sectionHeight
-          );
-          return {
-            [id]: {
-              sectionHeight,
-              scrollPosition,
-              progress: scrollPosition / sectionHeight,
-            },
-          };
-        })
-        .filter(Boolean); // null 값 제거
-      setVisibleSections(visibleSections as VisibleSectionsProps[]);
-    };
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  const isMyPictureVisible = visibleSections?.[0]?.["myPicture"];
-  const myPictureSection = ` ${styles.section} ${
-    isMyPictureVisible ? styles.visible : ""
-  }`;
-
-  const isProjectVisible = visibleSections?.[0]?.["project"];
-  const projectSection = `${styles.section} ${
-    isProjectVisible ? styles.visible : ""
-  }`;
-
-  const moveToExperience = () => {
-    experienceRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
-  const moveToProject = () => {
-    ProjectRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
-  const moveToIntro = () => {
-    induceScrollRef.current?.scrollIntoView({ behavior: "smooth" });
+  const getSectionClass = (id: string) => {
+    return `${styles.section} ${
+      visibleSections?.[0]?.[id] ? styles.visible : ""
+    }`;
   };
 
+  const scrollToSection = (ref: React.RefObject<HTMLDivElement | null>) => {
+    return () => ref.current?.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <>
       <Header
-        moveToExperience={moveToExperience}
-        moveToProject={moveToProject}
-        moveToIntro={moveToIntro}
+        moveToExperience={scrollToSection(experienceRef)}
+        moveToProject={scrollToSection(projectRef)}
+        moveToIntro={scrollToSection(induceScrollRef)}
       />
       <section ref={induceScrollRef}>
         <InduceScroll />
@@ -103,7 +50,7 @@ export default function Home() {
           <Intro visibleSections={visibleSections} />
         )}
       </section>
-      <section className={myPictureSection} ref={myPictureRef}>
+      <section className={getSectionClass("myPicture")} ref={myPictureRef}>
         <article className={styles.my_picture}>
           <MyPicture visibleSections={visibleSections} />
         </article>
@@ -128,7 +75,7 @@ export default function Home() {
         </article>
       </section>
 
-      <section ref={ProjectRef} className={projectSection}>
+      <section ref={projectRef} className={getSectionClass("project")}>
         <article className={styles.project}>
           <div className={styles.project_title}>
             <span>CASE STUDY</span>
