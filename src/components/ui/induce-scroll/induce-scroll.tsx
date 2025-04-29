@@ -9,15 +9,15 @@ export default function InduceScroll() {
           className={styles.arrow_first}
           src="https://i.ibb.co/BTbSmBS/1.png"
           alt="arrow"
-          width={30}
-          height={30}
+          width={20}
+          height={10}
         />
         <Image
           className={styles.arrow_second}
           src="https://i.ibb.co/BTbSmBS/1.png"
           alt="arrow"
-          width={30}
-          height={30}
+          width={20}
+          height={10}
         />
       </div>
     </div>

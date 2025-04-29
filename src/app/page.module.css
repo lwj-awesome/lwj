@@ -19,16 +19,10 @@
   gap: 2rem;
   width: 40%;
 }
-.experience_title {
-  font-size: 2rem;
-  font-weight: bold;
-}
-.experience_content {
-  line-height: 1.6rem;
-}
+
 .experience_scroll {
   position: sticky;
-  top: 4rem;
+  top: 6rem;
   width: 50%;
   left: 100rem;
 }
@@ -56,9 +50,6 @@
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-  h1 {
-    font-size: 3rem;
-  }
 }
 .project_box {
   display: flex;
@@ -94,10 +85,7 @@
     position: relative;
     padding: 2rem;
   }
-  .experience_title {
-    font-size: 1.2rem;
-    font-weight: bold;
-  }
+
   .experience_content {
     line-height: 1.2rem;
   }

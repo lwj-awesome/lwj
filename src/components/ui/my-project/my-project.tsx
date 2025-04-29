@@ -1,6 +1,7 @@
 import Link from "next/link";
 import styles from "./my-project.module.css";
 import { CommonComponentsProps } from "@/types/types";
+import Text from "../text-module/text-module";
 
 export default function Project({
   children,
@@ -24,11 +25,22 @@ function Image() {
 // }
 
 function Title({ children }: CommonComponentsProps) {
-  return <div className={styles.project_title}>{children}</div>;
+  return (
+    <Text.subTitle className={styles.project_title}>{children}</Text.subTitle>
+  );
 }
 
 function Description({ children }: CommonComponentsProps) {
-  return <div className={styles.project_description}>{children}</div>;
+  return (
+    <Text
+      as="h3"
+      size="base"
+      weight="bold"
+      className={styles.project_description}
+    >
+      {children}
+    </Text>
+  );
 }
 
 Project.Image = Image;

@@ -84,7 +84,7 @@ function Description({
   className,
 }: CommonComponentsProps & { className?: string }) {
   return (
-    <Text as="p" type="description" className={className} size="base">
+    <Text as="p" type="description" className={className} size="sm">
       {children}
     </Text>
   );

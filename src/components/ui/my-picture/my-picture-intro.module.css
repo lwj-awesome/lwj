@@ -6,19 +6,11 @@
   align-items: center;
   padding-top: 10rem;
 }
-.main_name span {
-  border: 1px solid yellow;
-  padding: 6px;
-  border-radius: 20px;
-  font-size: 2rem;
-}
-.main_name > h1 {
-  font-size: 5rem;
-}
+
 .main_name > img {
   width: 40rem;
   height: 40rem;
-  border-radius: 16px;
+  border-radius: var(--common-border-radius);
 }
 
 @media (max-width: 880px) {

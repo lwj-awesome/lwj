@@ -17,8 +17,8 @@ export default function Experience({
       >
         <ExperienceBox>
           <ExperienceBox.Title>
-            <div>Leonardo F. Ashton</div>
-            <div>/ design & usability</div>
+            <p>Leonardo F. Ashton</p>
+            <p>/ design & usability</p>
           </ExperienceBox.Title>
           <ExperienceBox.Content>
             “ It’s clear that a lot of thought went into showcasing your skills
@@ -27,8 +27,8 @@ export default function Experience({
         </ExperienceBox>
         <ExperienceBox>
           <ExperienceBox.Title>
-            <div>Diego H. Redmond</div>
-            <div>/ UI/UX Designer</div>
+            <p>Diego H. Redmond</p>
+            <p>/ UI/UX Designer</p>
           </ExperienceBox.Title>
           <ExperienceBox.Content>
             “ It’s clear that a lot of thought went into showcasing your skills
@@ -37,8 +37,8 @@ export default function Experience({
         </ExperienceBox>
         <ExperienceBox>
           <ExperienceBox.Title>
-            <div>Leonardo F. Ashton</div>
-            <div>/ design & usability</div>
+            <p>Leonardo F. Ashton</p>
+            <p>/ design & usability</p>
           </ExperienceBox.Title>
           <ExperienceBox.Content>
             “ It’s clear that a lot of thought went into showcasing your skills

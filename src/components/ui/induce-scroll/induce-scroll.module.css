@@ -2,14 +2,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 30vh;
+  height: 100vh;
 }
 
 .arrow_div {
-  position: absolute;
-  left: calc(50vw - 30px);
-  top: calc(50vh - 60px);
-  height: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .arrow_first {

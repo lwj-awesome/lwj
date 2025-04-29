@@ -1,3 +1,4 @@
+import Text from "../text-module/text-module";
 import styles from "./marquee.module.css";
 
 export default function Marquee({ children }: { children?: React.ReactNode }) {
@@ -5,14 +6,14 @@ export default function Marquee({ children }: { children?: React.ReactNode }) {
     <div className={styles.marquee_wrapper}>
       <div className={styles.marquee}>
         {children}
-        <p>User</p>
-        <p>Dev</p>
-        <p>Experience</p>
-        <p>Web</p>
-        <p>User</p>
-        <p>Experience</p>
-        <p>Dev</p>
-        <p>Web</p>
+        <Text.marquee>User</Text.marquee>
+        <Text.marquee>Dev</Text.marquee>
+        <Text.marquee>ExTextrience</Text.marquee>
+        <Text.marquee>Web</Text.marquee>
+        <Text.marquee>User</Text.marquee>
+        <Text.marquee>ExTexce</Text.marquee>
+        <Text.marquee>Dev</Text.marquee>
+        <Text.marquee>Web</Text.marquee>
       </div>
     </div>
   );

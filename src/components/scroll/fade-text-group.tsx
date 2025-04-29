@@ -61,7 +61,6 @@ export default function FadeTextGroup({
 
   const fadeTextGroupStyle: React.CSSProperties = {
     position: "sticky",
-    border: "1px solid blue",
     top: "10vh",
   };
   return (

@@ -1,16 +1,21 @@
 import { CommonComponentsProps } from "@/types/types";
 import styles from "./experience-box.module.css";
+import Text from "../text-module/text-module";
 
 export default function ExperienceBox({ children }: CommonComponentsProps) {
   return <div className={styles.box_layout}>{children}</div>;
 }
 
 function ExperienceTitle({ children }: CommonComponentsProps) {
-  return <div className={styles.box_title}>{children}</div>;
+  return <Text.subTitle className={styles.box_title}>{children}</Text.subTitle>;
 }
 
 function ExperienceContent({ children }: CommonComponentsProps) {
-  return <span className={styles.box_content}>{children}</span>;
+  return (
+    <Text.description className={styles.box_content}>
+      {children}
+    </Text.description>
+  );
 }
 
 ExperienceBox.Title = ExperienceTitle;
