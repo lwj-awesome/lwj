@@ -14,13 +14,13 @@ export default function Header({
   return (
     <header className={styles.header_layout}>
       <div onClick={moveToIntro}>
-        <Text.Header>HOME</Text.Header>
+        <Text.header>HOME</Text.header>
       </div>
       <div onClick={moveToExperience}>
-        <Text.Header>EXPERIENCE</Text.Header>
+        <Text.header>EXPERIENCE</Text.header>
       </div>
       <div onClick={moveToProject}>
-        <Text.Header>PROJECT</Text.Header>
+        <Text.header>PROJECT</Text.header>
       </div>
     </header>
   );

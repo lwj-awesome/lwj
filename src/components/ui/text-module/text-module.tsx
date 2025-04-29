@@ -1,4 +1,5 @@
 "use client";
+
 import { ReactNode } from "react";
 import styles from "./text.module.css";
 import { CommonComponentsProps } from "@/types/types";
@@ -6,7 +7,7 @@ import { CommonComponentsProps } from "@/types/types";
 export type TextProps = {
   children: ReactNode;
   as?: "p" | "h1" | "h2" | "h3";
-  size?: "sm" | "base" | "lg" | "xl" | "2xl";
+  size?: "sm" | "base" | "lg" | "xl" | "size_2xl";
   weight?: "light" | "medium" | "bold";
   type?: "title" | "description";
   className?: string;
@@ -36,30 +37,64 @@ export default function Text({
   );
 }
 
-function Title({ children }: CommonComponentsProps) {
+function Title({
+  children,
+  className,
+}: CommonComponentsProps & { className?: string }) {
   return (
-    <Text as="h1" type="title" weight="bold" size="2xl">
+    <Text
+      as="h1"
+      type="title"
+      weight="bold"
+      size="size_2xl"
+      className={className}
+    >
       {children}
     </Text>
   );
 }
-function SubTitle({ children }: CommonComponentsProps) {
+function SubTitle({
+  children,
+  className,
+}: CommonComponentsProps & { className?: string }) {
   return (
-    <Text as="h2" type="title" weight="medium" size="xl">
+    <Text as="h2" type="title" className={className} weight="bold" size="lg">
       {children}
     </Text>
   );
 }
-function HeaderText({ children }: CommonComponentsProps) {
+function HeaderText({
+  children,
+  className,
+}: CommonComponentsProps & { className?: string }) {
   return (
-    <Text as="h3" type="title" weight="medium" size="base">
+    <Text
+      as="h3"
+      type="title"
+      className={className}
+      weight="medium"
+      size="base"
+    >
       {children}
     </Text>
   );
 }
-function Description({ children }: CommonComponentsProps) {
+function Description({
+  children,
+  className,
+}: CommonComponentsProps & { className?: string }) {
   return (
-    <Text as="p" type="description" size="sm">
+    <Text as="p" type="description" className={className} size="base">
+      {children}
+    </Text>
+  );
+}
+function MarqueeText({
+  children,
+  className,
+}: CommonComponentsProps & { className?: string }) {
+  return (
+    <Text as="h2" type="description" className={className} size="size_2xl">
       {children}
     </Text>
   );
@@ -67,5 +102,6 @@ function Description({ children }: CommonComponentsProps) {
 
 Text.title = Title;
 Text.subTitle = SubTitle;
-Text.Description = Description;
-Text.Header = HeaderText;
+Text.description = Description;
+Text.header = HeaderText;
+Text.marquee = MarqueeText;
