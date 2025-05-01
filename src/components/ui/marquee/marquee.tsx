@@ -1,10 +1,16 @@
 import Text from "../text-module/text-module";
 import styles from "./marquee.module.css";
 
-export default function Marquee({ children }: { children?: React.ReactNode }) {
+export default function Marquee({
+  children,
+  direction = "left",
+}: {
+  children?: React.ReactNode;
+  direction?: "left" | "right";
+}) {
   return (
     <div className={styles.marquee_wrapper}>
-      <div className={styles.marquee}>
+      <div className={`${styles.marquee} ${styles[direction]}`}>
         {children}
         <Text.marquee>User</Text.marquee>
         <Text.marquee>Dev</Text.marquee>

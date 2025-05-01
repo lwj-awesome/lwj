@@ -1,5 +1,3 @@
-"use client";
-
 import { ReactNode } from "react";
 import styles from "./text.module.css";
 import { CommonComponentsProps } from "@/types/types";

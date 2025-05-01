@@ -23,14 +23,19 @@
     transparent
   );
 }
-
 .marquee {
   display: flex;
   flex-direction: row;
   gap: 8rem;
-  animation: scroll-left 50s linear infinite;
   font-size: 3rem;
   will-change: transform;
+}
+.left {
+  animation: scroll-left 50s linear infinite;
+}
+
+.right {
+  animation: scroll-right 50s linear infinite;
 }
 
 @keyframes scroll-left {
@@ -39,6 +44,15 @@
   }
   100% {
     transform: translateX(-100%);
+  }
+}
+
+@keyframes scroll-right {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
   }
 }
 
