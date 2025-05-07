@@ -1,4 +1,3 @@
-import styles from "./header.module.css";
 import Text from "../text-module/text-module";
 interface HeaderProps {
   moveToExperience: () => void;
@@ -12,7 +11,7 @@ export default function Header({
   moveToIntro,
 }: HeaderProps) {
   return (
-    <header className={styles.header_layout}>
+    <header className="flex flex-row justify-center w-full fixed z-1 gap-[10rem] px-[30px] py-[20px] bg-custom-background">
       <div onClick={moveToIntro}>
         <Text.header>HOME</Text.header>
       </div>

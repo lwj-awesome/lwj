@@ -1,5 +1,4 @@
 import Link from "next/link";
-import styles from "./my-project.module.css";
 import { CommonComponentsProps } from "@/types/types";
 import Text from "../text-module/text-module";
 
@@ -12,13 +11,15 @@ export default function Project({
 }) {
   return (
     <Link href={href}>
-      <div className={styles.project_content}>{children}</div>
+      <div className="flex flex-col gap-custom-gap-md">{children}</div>
     </Link>
   );
 }
 
 function Image() {
-  return <div className={styles.project_imageLayout}></div>;
+  return (
+    <div className="h-[32rem] rounded-custom-border-radius border-1"></div>
+  );
 }
 // function Image({ children }: CommonComponentsProps) {
 //   return <div className={styles.project_imageLayout}></div>;
@@ -26,18 +27,13 @@ function Image() {
 
 function Title({ children }: CommonComponentsProps) {
   return (
-    <Text.subTitle className={styles.project_title}>{children}</Text.subTitle>
+    <Text.subTitle className="flex justify-between">{children}</Text.subTitle>
   );
 }
 
 function Description({ children }: CommonComponentsProps) {
   return (
-    <Text
-      as="h3"
-      size="base"
-      weight="bold"
-      className={styles.project_description}
-    >
+    <Text as="h3" size="base" weight="bold">
       {children}
     </Text>
   );

@@ -1,21 +1,22 @@
 import { CommonComponentsProps } from "@/types/types";
-import styles from "./experience-box.module.css";
 import Text from "../text-module/text-module";
 
 export default function ExperienceBox({ children }: CommonComponentsProps) {
-  return <div className={styles.box_layout}>{children}</div>;
+  return (
+    <div className="border-1 rounded-custom-border-radius min-h-[10rem] p-custom-padding flex flex-col gap-custom-gap-lg">
+      {children}
+    </div>
+  );
 }
 
 function ExperienceTitle({ children }: CommonComponentsProps) {
-  return <Text.subTitle className={styles.box_title}>{children}</Text.subTitle>;
+  return (
+    <Text.subTitle className="flex justify-between">{children}</Text.subTitle>
+  );
 }
 
 function ExperienceContent({ children }: CommonComponentsProps) {
-  return (
-    <Text.description className={styles.box_content}>
-      {children}
-    </Text.description>
-  );
+  return <Text.description>{children}</Text.description>;
 }
 
 ExperienceBox.Title = ExperienceTitle;

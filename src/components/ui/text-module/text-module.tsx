@@ -63,13 +63,12 @@ function SubTitle({
 }
 function HeaderText({
   children,
-  className,
 }: CommonComponentsProps & { className?: string }) {
   return (
     <Text
       as="h3"
       type="title"
-      className={className}
+      className="cursor-pointer"
       weight="medium"
       size="base"
     >
