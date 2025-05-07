@@ -1,16 +1,12 @@
+@import "tailwindcss";
+
 :root {
   /* color */
   --basic-background: #181818;
   --basic-color: silver;
+  --basic: red;
   --text-primary: #cccccc;
   --text-secondary: #lightgray;
-
-  --background: var(--basic-background);
-  --foreground: var(--basic-color);
-  --common-border-color: var(--basic-color);
-  --common-text-color: var(--text-primary);
-  --common-description-text-color: var(--text-secondary);
-  --common-description-title-text-color: var(--basic-color);
 
   /* font Size */
   --font-size-xs: 0.8rem;
@@ -30,26 +26,41 @@
   --spacing-md: 1rem;
   --spacing-lg: 1.6rem;
   --spacing-xl: 2rem;
-
-  /* common (using) */
-  --common-gap: var(--spacing-xl);
-  --common-padding: var(--spacing-lg);
-  --common-border-radius: 1rem;
-  --common-border-solid: 1px solid var(--common-border-color);
-
-  /* font-size (using) */
-  --common-big-font-size: var(--font-size-3xl);
-  --common-middle-font-size: var(--font-size-2xl);
-  --common-title-font-size: var(--font-size-xl);
-  --common-description-font-size: var(--font-size-base);
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    --basic-background: silver;
-    --basic-color: #181818;
-    --text-primary: blue;
-    --text-secondary: #lightgray;
+@theme {
+  --color-custom-background: var(--basic-background);
+  --color-custom-foreground: var(--basic-color);
+  --color-custom-border-color: var(--basic-color);
+  --color-custom-basic-text-color: var(--text-primary);
+  --color-custom-description-text-color: var(--text-secondary);
+  --color-custom-description-title-text-color: var(--basic-color);
+
+  /* spacing */
+  --spacing-custom-gap-lg: var(--spacing-xl);
+  --spacing-custom-gap-md: var(--spacing-md);
+  --spacing-custom-padding: var(--spacing-lg);
+
+  --radius-custom-border-radius: 1rem;
+  --radius-custom-image-radius: 1rem;
+
+  /* font Size */
+  --font-custom-big-font-size: var(--font-size-3xl);
+  --font-custom-middle-font-size: var(--font-size-2xl);
+  --font-custom-title-font-size: var(--font-size-xl);
+  --font-custom-description-font-size: var(--font-size-base);
+
+  /* animation */
+  --animate-fadeUp: fadeUp 1s ease-out forwards;
+  @keyframes fadeUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }
 
@@ -65,12 +76,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
 }
 
 a {

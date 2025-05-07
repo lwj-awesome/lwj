@@ -1,19 +1,17 @@
 import Text from "@/components/ui/text-module/text-module";
-import styles from "./page.module.css";
 import Marquee from "@/components/ui/marquee/marquee";
 
 export default function Page() {
+  const commonImageStyle =
+    "rounded-custom-image-radius sm:h-[30rem] sm:w-[30rem] h-[20rem] w-full";
+  const commonContentStyle = "flex flex-col gap-custom-gap-lg px-[2rem] w-full";
   return (
     <>
-      <div className={styles.detail_layout}>
+      <div className="sm:p-[10rem] p-[1.2rem] animate-fadeUp w-full">
         <Text.title>A B C D E</Text.title>
-        <article className={styles.detail_main_article}>
-          <img
-            className={styles.detail_main_image}
-            src="images/see.jpg"
-            alt=""
-          />
-          <div className={styles.detail_main_content}>
+        <article className="sm:flex sm:flex-row  gap-custom-gap-md flex flex-col">
+          <img className={commonImageStyle} src="images/see.jpg" alt="" />
+          <div className={commonContentStyle}>
             <Text.subTitle>Introduction to UI/UX</Text.subTitle>
             <Text.description>
               Mastering UI/UX Design for Websites: Key Principles and Best
@@ -37,10 +35,9 @@ export default function Page() {
         </article>
         <Marquee />
         <Marquee direction="right" />
-        <article></article>
 
-        <article className={styles.detail_main_article}>
-          <div className={styles.detail_main_content}>
+        <article className="sm:flex sm:flex-row gap-[1.2rem] sm:mt-[4rem] flex flex-col-reverse ">
+          <div className={commonContentStyle}>
             <Text.subTitle>Introduction to UI/UX</Text.subTitle>
             <Text.description>
               Mastering UI/UX Design for Websites: Key Principles and Best
@@ -61,11 +58,7 @@ export default function Page() {
               ease.
             </Text.description>
           </div>
-          <img
-            className={styles.detail_main_image}
-            src="images/see.jpg"
-            alt=""
-          />
+          <img className={commonImageStyle} src="images/see.jpg" alt="" />
         </article>
       </div>
     </>
