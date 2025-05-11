@@ -2,11 +2,10 @@
 
 :root {
   /* color */
-  --basic-background: #181818;
-  --basic-color: silver;
-  --basic: red;
-  --text-primary: #cccccc;
-  --text-secondary: #lightgray;
+  --color-black: #181818;
+  --color-silver: silver;
+  --color-darkSilver: #cccccc;
+  --color-lightgray: lightgray
 
   /* font Size */
   --font-size-xs: 0.8rem;
@@ -30,12 +29,12 @@
 }
 
 @theme {
-  --color-custom-background: var(--basic-background);
-  --color-custom-foreground: var(--basic-color);
-  --color-custom-border-color: var(--basic-color);
-  --color-custom-basic-text-color: var(--text-primary);
-  --color-custom-description-text-color: var(--text-secondary);
-  --color-custom-description-title-text-color: var(--basic-color);
+  --color-custom-background: var(--color-black);
+  --color-custom-foreground: var(--color-silver);
+  --color-custom-border-color: var(--color-silver);
+  --color-custom-basic-text-color: var(--color-darkSilver);
+  --color-custom-description-text-color: var(--color-lightgray);
+  --color-custom-description-title-text-color: var(--color-silver);
 
   /* spacing */
   --spacing-custom-gap-lg: var(--spacing-xl);
@@ -73,8 +72,8 @@ body {
 }
 
 body {
-  color: var(--basic-color);
-  background: var(--basic-background);
+  color: var(--color-custom-foreground);
+  background: var( --color-custom-background);
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

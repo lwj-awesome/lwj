@@ -2,14 +2,16 @@
 import styles from "./page.module.css";
 import { useRef } from "react";
 import MyPicture from "@/components/ui/my-picture/my-picture-intro";
-import { Intro } from "@/components/ui/intro/intro";
-import Project from "@/components/ui/my-project/my-project";
 import Header from "@/components/ui/header/header";
+import { Intro } from "@/components/ui/intro/intro";
 import InduceScroll from "@/components/ui/induce-scroll/induce-scroll";
 import Marquee from "@/components/ui/marquee/marquee";
 import Experience from "@/components/ui/experience/experience";
 import { useVisibleSections } from "@/hooks/useVisibleSections";
 import Text from "@/components/ui/text-module/text-module";
+import { ServiceDesk } from "@/components/ui/servicedesk-project/servicedesk-project";
+import { Nci } from "@/components/ui/nci-project/nci-project";
+import { Giggy } from "@/components/ui/giggy-project/giggy-project";
 
 export default function Home() {
   const introRef = useRef<HTMLDivElement | null>(null);
@@ -82,32 +84,13 @@ export default function Home() {
       <section ref={projectRef} className={getSectionClass("project")}>
         <article className="flex flex-col justify-end items-center h-[150vh]">
           <div className="flex flex-col items-center gap-custom-gap-lg">
-            <Text.title>A B C D E F G</Text.title>
+            <Text.title>PROJECT</Text.title>
           </div>
-          <article className="flex px-[2rem] py-[4rem] justify-center gap-custom-gap-lg">
-            <Project href="/detail">
-              <Project.Image />
-              <Project.Title>
-                <p>project</p>
-                <p>SEP 13, 1993</p>
-              </Project.Title>
-              <Project.desc>
-                Samsung Approach to Digital Product Design: A Seamless Blend of
-                UI/UX
-              </Project.desc>
-            </Project>
-            <Project href="/detail">
-              <Project.Image />
-              <Project.Title>
-                <p>project</p>
-                <p>SEP 13, 1993</p>
-              </Project.Title>
-              <Project.desc>
-                Samsung Approach to Digital Product Design: A Seamless Blend of
-                UI/UX
-              </Project.desc>
-            </Project>
-          </article>
+          <div className="w-full flex  px-[2rem] py-[4rem] gap-custom-gap-lg">
+            <ServiceDesk />
+            <Nci />
+          </div>
+          <Giggy />
         </article>
       </section>
     </>

@@ -12,14 +12,12 @@ export default function Marquee({
     <div className={styles.marquee_wrapper}>
       <div className={`${styles.marquee} ${styles[direction]}`}>
         {children}
-        <Text.marquee>User</Text.marquee>
-        <Text.marquee>Dev</Text.marquee>
-        <Text.marquee>ExTextrience</Text.marquee>
-        <Text.marquee>Web</Text.marquee>
-        <Text.marquee>User</Text.marquee>
-        <Text.marquee>ExTexce</Text.marquee>
-        <Text.marquee>Dev</Text.marquee>
-        <Text.marquee>Web</Text.marquee>
+        <Text.marquee>React</Text.marquee>
+        <Text.marquee>Storybook</Text.marquee>
+        <Text.marquee>JS</Text.marquee>
+        <Text.marquee>TS</Text.marquee>
+        <Text.marquee>React-query</Text.marquee>
+        <Text.marquee>Recoil</Text.marquee>
       </div>
     </div>
   );
