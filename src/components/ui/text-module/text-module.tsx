@@ -61,9 +61,7 @@ function SubTitle({
     </Text>
   );
 }
-function HeaderText({
-  children,
-}: CommonComponentsProps & { className?: string }) {
+function HeaderText({ children }: CommonComponentsProps) {
   return (
     <Text
       as="h3"

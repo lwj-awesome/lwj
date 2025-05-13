@@ -3,7 +3,7 @@ import Text from "../text-module/text-module";
 
 export default function ExperienceBox({ children }: CommonComponentsProps) {
   return (
-    <div className="border-1 rounded-custom-border-radius min-h-[10rem] p-custom-padding flex flex-col gap-custom-gap-lg">
+    <div className="border-1 border-custom-border-color rounded-custom-border-radius min-h-[10rem] p-custom-padding flex flex-col gap-custom-gap-lg">
       {children}
     </div>
   );

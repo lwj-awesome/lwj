@@ -30,9 +30,6 @@
   font-weight: var(--font-weight-bold);
 }
 
-.title {
-  color: var(--common-text-color);
-}
 .description {
-  color: var(--common-description-text-color);
+  color: var(--color-custom-description-text-color);
 }
