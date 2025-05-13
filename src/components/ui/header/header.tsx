@@ -1,4 +1,5 @@
 import Text from "../text-module/text-module";
+import ThemeToggleButton from "../toggle-button/toggle-button";
 interface HeaderProps {
   moveToExperience: () => void;
   moveToProject: () => void;
@@ -21,6 +22,9 @@ export default function Header({
       <div onClick={moveToProject}>
         <Text.header>PROJECT</Text.header>
       </div>
+      <main className=" bg-white text-black dark:bg-black dark:text-white">
+        <ThemeToggleButton />
+      </main>
     </header>
   );
 }

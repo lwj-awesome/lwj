@@ -2,10 +2,11 @@
 
 :root {
   /* color */
-  --color-black: #181818;
-  --color-silver: silver;
-  --color-darkSilver: #cccccc;
-  --color-lightgray: lightgray
+  --color-main-black: rgb(5, 8, 16);
+  --color-sub-black: rgb(29, 33, 38);
+  --color-main-green: rgb(17, 233, 86);
+  --color-main-white: rgb(207, 207, 208);
+  --color-main-gray: rgb(250, 250, 252);
 
   /* font Size */
   --font-size-xs: 0.8rem;
@@ -26,15 +27,21 @@
   --spacing-lg: 1.6rem;
   --spacing-xl: 2rem;
   --spacing-xxl: 4rem;
+
+  --color-main-black: rgb(5, 8, 16);
+  --color-sub-black: rgb(29, 33, 38);
+  --color-main-green: rgb(17, 233, 86);
+  --color-main-white: rgb(207, 207, 208);
+  --color-main-gray: rgb(250, 250, 252);
 }
 
 @theme {
-  --color-custom-background: var(--color-black);
-  --color-custom-foreground: var(--color-silver);
+  --color-custom-background: var(--color-sub-black);
+  --color-custom-foreground: var(--color-main-white);
   --color-custom-border-color: var(--color-silver);
-  --color-custom-basic-text-color: var(--color-darkSilver);
-  --color-custom-description-text-color: var(--color-lightgray);
-  --color-custom-description-title-text-color: var(--color-silver);
+  --color-custom-basic-text-color: var(--color-main-gray);
+  --color-custom-description-text-color: var(--color-main-gray);
+  --color-custom-description-title-text-color: var(--color-main-gray);
 
   /* spacing */
   --spacing-custom-gap-lg: var(--spacing-xl);
@@ -64,6 +71,14 @@
     }
   }
 }
+.dark {
+  --color-custom-background: var(--color-sub-black);
+  --color-custom-foreground: var(--color-main-white);
+  --color-custom-border-color: var(--color-silver);
+  --color-custom-basic-text-color: var(--color-main-gray);
+  --color-custom-description-text-color: var(--color-main-gray);
+  --color-custom-description-title-text-color: var(--color-main-gray);
+}
 
 html,
 body {
@@ -73,7 +88,7 @@ body {
 
 body {
   color: var(--color-custom-foreground);
-  background: var( --color-custom-background);
+  background: var(--color-custom-background);
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
