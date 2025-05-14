@@ -39,8 +39,8 @@
   --color-custom-header-bg-color: rgb(254, 234, 201);
 
   /* spacing */
-  --spacing-custom-gap-lg: var(--spacing-xl);
   --spacing-custom-gap-md: var(--spacing-md);
+  --spacing-custom-gap-lg: var(--spacing-xl);
   --spacing-custom-gap-xxl: var(--spacing-xxl);
   --spacing-custom-padding: var(--spacing-lg);
 
@@ -63,6 +63,18 @@
     100% {
       opacity: 1;
       transform: translateY(0);
+    }
+  }
+
+  --animate-fadeOut: fadeOut 1s ease-in-out forwards;
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(30px);
     }
   }
 }

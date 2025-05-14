@@ -1,15 +1,18 @@
 import Text from "@/components/ui/text-module/text-module";
 import Marquee from "@/components/ui/marquee/marquee";
+import {
+  commonContentStyle,
+  commonImageStyle,
+  detailLayoutStyle,
+  secondArticleStyle,
+} from "../common.styles";
 
 export default function Page() {
-  const commonImageStyle =
-    "rounded-custom-image-radius sm:h-[30rem] sm:w-[30rem] h-[20rem] w-full";
-  const commonContentStyle = "flex flex-col gap-custom-gap-lg px-[2rem] w-full";
   return (
     <>
-      <div className="sm:p-[10rem] p-[1.2rem] animate-fadeUp w-full">
+      <div className={detailLayoutStyle}>
         <Text.title>A B C D E</Text.title>
-        <article className="sm:flex sm:flex-row  gap-custom-gap-md flex flex-col">
+        <article className="flex flex-row  gap-custom-gap-md flex flex-col">
           <img className={commonImageStyle} src="images/see.jpg" alt="" />
           <div className={commonContentStyle}>
             <Text.subTitle>NSD ITSM SERVICEDESK</Text.subTitle>
@@ -43,7 +46,7 @@ export default function Page() {
         <Marquee />
         <Marquee direction="right" />
 
-        <article className="sm:flex sm:flex-row gap-[1.2rem] sm:mt-[4rem] flex flex-col-reverse ">
+        <article className={secondArticleStyle}>
           <div className={commonContentStyle}>
             <Text.subTitle>ITSM SERVICEDESK with STORYBOOK</Text.subTitle>
             <Text.description>

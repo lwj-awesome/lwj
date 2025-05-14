@@ -1,5 +1,4 @@
 "use client";
-import styles from "./page.module.css";
 import { useRef } from "react";
 import MyPicture from "@/components/ui/my-picture/my-picture-intro";
 import Header from "@/components/ui/header/header";
@@ -11,6 +10,15 @@ import { useVisibleSections } from "@/hooks/useVisibleSections";
 import Text from "@/components/ui/text-module/text-module";
 import { ServiceDesk } from "@/components/ui/servicedesk-project/servicedesk-project";
 import { Nci } from "@/components/ui/nci-project/nci-project";
+import {
+  experiecntSectionLayoutStyle,
+  experienceSectionBoxStyle,
+  experienceSectionStyle,
+  projectSectionBoxLayoutStyle,
+  projectSectionStyle,
+  projectSectionTiteStyle,
+} from "./page.styles";
+import clsx from "clsx";
 
 export default function Home() {
   const introRef = useRef<HTMLDivElement | null>(null);
@@ -28,11 +36,12 @@ export default function Home() {
   ];
   const visibleSections = useVisibleSections(sections);
 
-  const getSectionClass = (id: string) => {
-    return `${styles.section} ${
-      visibleSections?.[0]?.[id] ? styles.visible : ""
-    }`;
-  };
+  const getSectionClass = (id: string) =>
+    clsx(
+      "pt-[20rem]",
+      "opacity-0",
+      visibleSections?.[0]?.[id] ? "animate-fadeUp" : "animate-fadeOut"
+    );
 
   const scrollToSection = (ref: React.RefObject<HTMLDivElement | null>) => {
     return () => ref.current?.scrollIntoView({ behavior: "smooth" });
@@ -59,33 +68,29 @@ export default function Home() {
       </section>
       <Marquee />
 
-      <section
-        className="p-custom-gap-xxl h-[600vh] w-full"
-        ref={experienceRef}
-      >
-        <article className="sticky top-[10rem] flex flex-col gap-custom-gap-lg w-[40%]">
+      <section className={experiecntSectionLayoutStyle} ref={experienceRef}>
+        <article className={experienceSectionStyle}>
           <div>
-            <Text.title>i blend creativity with</Text.title>
-            <Text.title>technical expertise</Text.title>
+            <Text.title>이력 및 교육</Text.title>
           </div>
           <Text.description>
             I’m dedicated to crafting websites that bring your ideas to life,
             combining design and development to deliver fast, impactful results.
           </Text.description>
         </article>
-        <article className="sticky top-[6rem] w-[50%] left-[100rem]">
+        <article className={experienceSectionBoxStyle}>
           {visibleSections?.[0]?.["experience"] && (
             <Experience visibleSections={visibleSections} />
           )}
         </article>
       </section>
-
+      <Marquee />
       <section ref={projectRef} className={getSectionClass("project")}>
-        <article className="flex flex-col justify-end items-center h-[150vh]">
-          <div className="flex flex-col items-center gap-custom-gap-lg">
+        <article className={projectSectionStyle}>
+          <div className={projectSectionTiteStyle}>
             <Text.title>PROJECT</Text.title>
           </div>
-          <div className="w-full flex justify-center  px-[2rem] py-[4rem] gap-custom-gap-lg">
+          <div className={projectSectionBoxLayoutStyle}>
             <ServiceDesk />
             <Nci />
             <ServiceDesk />
