@@ -1,12 +1,9 @@
 import { CommonComponentsProps } from "@/types/types";
 import Text from "../text-module/text-module";
+import { experienceLayout } from "./experience-box.style";
 
 export default function ExperienceBox({ children }: CommonComponentsProps) {
-  return (
-    <div className="border-1 border-custom-border-color rounded-custom-border-radius min-h-[10rem] p-custom-padding flex flex-col gap-custom-gap-lg">
-      {children}
-    </div>
-  );
+  return <div className={experienceLayout}>{children}</div>;
 }
 
 function ExperienceTitle({ children }: CommonComponentsProps) {

@@ -18,7 +18,7 @@ export default function Project({
 }
 
 function Image({ src }: { src: string }) {
-  return <img src={src} alt="" width="280" />;
+  return <img src={src} alt="" width="200" />;
 }
 
 function Content({ children }: CommonComponentsProps) {

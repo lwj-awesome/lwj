@@ -85,7 +85,7 @@ export default function Home() {
           <div className="flex flex-col items-center gap-custom-gap-lg">
             <Text.title>PROJECT</Text.title>
           </div>
-          <div className="w-full flex  px-[2rem] py-[4rem] gap-custom-gap-lg">
+          <div className="w-full flex justify-center  px-[2rem] py-[4rem] gap-custom-gap-lg">
             <ServiceDesk />
             <Nci />
             <ServiceDesk />

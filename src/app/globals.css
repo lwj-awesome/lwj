@@ -28,13 +28,13 @@
   --color-sub-white: rgb(200, 212, 237);
   --color-main-gray: rgb(97, 112, 136);
   --color-main-navy: rgb(29, 30, 41);
-  --color-main-slate-blue: rgb(112, 128, 144);
+  --color-main-slate-blue: rgb(90, 107, 122);
 }
 
 @theme {
   --color-custom-background: var(--color-main-beige);
   --color-custom-foreground: var(--color-main-slate-blue);
-  --color-custom-border-color: var(--color-main-beige);
+  --color-custom-border-color: var(--color-main-slate-blue);
   --color-custom-description-text-color: var(--color-main-gray);
   --color-custom-header-bg-color: rgb(254, 234, 201);
 

@@ -2,9 +2,9 @@ import clsx from "clsx";
 
 export const projectLayoutStyle = clsx(
   "px-custom-padding",
-  "w-[25vw]",
-  "h-[35rem]",
-  "border-4",
+  "w-[20vw]",
+  "h-[30rem]",
+  "border-2",
   "border-custom-border-color",
   "rounded-custom-border-radius",
   "flex flex-col",

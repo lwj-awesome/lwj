@@ -1,5 +1,6 @@
 import Text from "../text-module/text-module";
 import ThemeToggleButton from "../toggle-button/toggle-button";
+import { headerMainStyle, headerStyle } from "./header.style";
 
 interface HeaderProps {
   moveToExperience: () => void;
@@ -13,8 +14,8 @@ export default function Header({
   moveToIntro,
 }: HeaderProps) {
   return (
-    <header className="w-full fixed z-1 m-[30px]">
-      <main className="w-[65vw] h-[80px] mx-auto flex justify-between px-[30px] gap-[8rem] bg-custom-header-bg-color rounded-custom-border-radius">
+    <header className={headerStyle}>
+      <main className={headerMainStyle}>
         <div className="flex items-center">
           <img src="/images/logo.png" width="90" height="90" alt="Logo" />
         </div>
