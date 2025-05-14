@@ -3,14 +3,16 @@
 import { useEffect, useState } from "react";
 
 export function useTheme() {
-  const [theme, setTheme] = useState<"light" | "dark">(() => {
-    if (typeof window !== "undefined") {
-      return (localStorage.getItem("theme") as "dark" | "light") || "light";
-    }
-    return "light";
-  });
+  const [theme, setTheme] = useState<"light" | "dark" | null>(null);
 
   useEffect(() => {
+    const storedTheme =
+      (localStorage.getItem("theme") as "dark" | "light") || "light";
+    setTheme(storedTheme);
+  }, []);
+
+  useEffect(() => {
+    if (!theme) return;
     const root = document.documentElement;
     if (theme === "dark") {
       root.classList.add("dark");
@@ -21,8 +23,9 @@ export function useTheme() {
   }, [theme]);
 
   const toggleTheme = () => {
+    if (!theme) return;
     setTheme((prev) => (prev === "light" ? "dark" : "light"));
   };
 
-  return { theme, toggleTheme };
+  return { theme: theme || "light", toggleTheme };
 }

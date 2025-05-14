@@ -11,7 +11,6 @@ import { useVisibleSections } from "@/hooks/useVisibleSections";
 import Text from "@/components/ui/text-module/text-module";
 import { ServiceDesk } from "@/components/ui/servicedesk-project/servicedesk-project";
 import { Nci } from "@/components/ui/nci-project/nci-project";
-import { Giggy } from "@/components/ui/giggy-project/giggy-project";
 
 export default function Home() {
   const introRef = useRef<HTMLDivElement | null>(null);
@@ -89,8 +88,9 @@ export default function Home() {
           <div className="w-full flex  px-[2rem] py-[4rem] gap-custom-gap-lg">
             <ServiceDesk />
             <Nci />
+            <ServiceDesk />
+            <Nci />
           </div>
-          <Giggy />
         </article>
       </section>
     </>

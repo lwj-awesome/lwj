@@ -1,25 +1,18 @@
-import Project from "../my-project/my-project";
+import Project from "../project-box/project-box";
+import Text from "../text-module/text-module";
 
 export function Nci() {
   return (
-    <div className="w-[50vw] p-custom-gap-xxl">
-      <Project href="/detail/nci">
-        <div className="flex justify-center">
-          <Project.ImageBox src="/images/nci2.png" />
-        </div>
-        <Project.Title>
-          <p>nc - project</p>
-          <p>2023 ~</p>
-        </Project.Title>
-        <Project.descGroup>
-          <Project.desc>
-            NCSOFT의 ITSM 서비스, 장애관리 서비스 개발
-          </Project.desc>
-          <Project.desc>
-            고객 니즈에 따른 지속적인 유지 보수 및 고도화 진행
-          </Project.desc>
-        </Project.descGroup>
-      </Project>
-    </div>
+    <Project href="/detail/nci">
+      <Project.img src="/images/nci2.png" />
+      <Project.content>
+        <Text.subTitle>Rock-Paper-Scissors Game</Text.subTitle>
+        <Text.description>
+          Created an interactive Rock Paper Scissors game with HTML, CSS, and
+          JavaScript. This project was a great learning experience in building
+          dynamic web applications.
+        </Text.description>
+      </Project.content>
+    </Project>
   );
 }
