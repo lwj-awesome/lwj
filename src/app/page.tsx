@@ -47,7 +47,7 @@ export default function Home() {
     return () => ref.current?.scrollIntoView({ behavior: "smooth" });
   };
   return (
-    <>
+    <div className="w-[100%]">
       <Header
         moveToExperience={scrollToSection(experienceRef)}
         moveToProject={scrollToSection(projectRef)}
@@ -62,14 +62,27 @@ export default function Home() {
         )}
       </section>
       <section className={getSectionClass("myPicture")} ref={myPictureRef}>
-        <article className="px-[1rem] py-[5rem]">
+        <article className="px-[1rem] py-[7rem]">
           <MyPicture visibleSections={visibleSections} />
         </article>
       </section>
-      <Marquee />
+
+      <div className="relative group h-[250px] w-full overflow-hidden">
+        <div className="hover:blur-lg transition duration-300">
+          <Marquee />
+          <Marquee direction="right" />
+        </div>
+        <div className="pointer-events-none absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2 z-10 flex justify-center">
+          <div className="opacity-0 translate-y-full group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-700 ease-out">
+            <p className="text-center text-lg font-semibold text-gray-900 bg-white/80 px-4 py-2 rounded shadow-md">
+              올라오는 텍스트
+            </p>
+          </div>
+        </div>
+      </div>
 
       <section className={experiecntSectionLayoutStyle} ref={experienceRef}>
-        <article className={experienceSectionStyle}>
+        {/* <article className={experienceSectionStyle}>
           <div>
             <Text.title>이력 및 교육</Text.title>
           </div>
@@ -77,13 +90,14 @@ export default function Home() {
             I’m dedicated to crafting websites that bring your ideas to life,
             combining design and development to deliver fast, impactful results.
           </Text.description>
-        </article>
+        </article> */}
         <article className={experienceSectionBoxStyle}>
           {visibleSections?.[0]?.["experience"] && (
             <Experience visibleSections={visibleSections} />
           )}
         </article>
       </section>
+
       <Marquee />
       <section ref={projectRef} className={getSectionClass("project")}>
         <article className={projectSectionStyle}>
@@ -98,6 +112,6 @@ export default function Home() {
           </div>
         </article>
       </section>
-    </>
+    </div>
   );
 }

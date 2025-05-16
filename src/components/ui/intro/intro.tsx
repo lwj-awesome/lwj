@@ -1,5 +1,4 @@
 import FadeText from "@/components/scroll/fade-text";
-import ImageScroll from "@/components/scroll/image-scroll";
 import SideFadeText from "@/components/scroll/side-fade-text";
 import { VisibleSectionsProps } from "@/types/types";
 
@@ -10,13 +9,6 @@ export function Intro({
 }) {
   return (
     <article>
-      <ImageScroll
-        scrollHeight={visibleSections?.[0]["intro"].sectionHeight}
-        scrollY={visibleSections?.[0]["intro"].scrollPosition}
-        startRatio={0}
-        endRatio={0.7}
-        src="images/see.jpg"
-      />
       <SideFadeText
         scrollHeight={visibleSections?.[0]["intro"].sectionHeight}
         scrollY={visibleSections?.[0]["intro"].scrollPosition}
@@ -25,7 +17,7 @@ export function Intro({
         style={textStyle}
         fadeFullOut={[0.5, 0.85]}
       >
-        ABC
+        AWESOME
       </SideFadeText>
       <SideFadeText
         scrollHeight={visibleSections?.[0]["intro"].sectionHeight}
@@ -36,7 +28,7 @@ export function Intro({
         isLeft
         fadeFullOut={[0.5, 0.85]}
       >
-        ABC
+        FRONT_END
       </SideFadeText>
       <SideFadeText
         scrollHeight={visibleSections?.[0]["intro"].sectionHeight}
@@ -46,7 +38,7 @@ export function Intro({
         style={textStyle2}
         fadeFullOut={[0.5, 0.85]}
       >
-        ABC
+        DEVELOPER
       </SideFadeText>
       <FadeText
         scrollHeight={visibleSections?.[0]["intro"]?.sectionHeight}
@@ -54,30 +46,18 @@ export function Intro({
         startRatio={0.7}
         endRatio={1}
       >
-        ABC
+        LWJ
       </FadeText>
     </article>
   );
 }
 
 const textStyle: React.CSSProperties = {
-  fontSize: "10vh",
-  position: "fixed",
   top: "30vh",
-  width: "100vw",
-  textAlign: "center",
 };
 const textStyle1: React.CSSProperties = {
-  fontSize: "10vh",
-  position: "fixed",
-  top: "43vh",
-  width: "100vw",
-  textAlign: "center",
+  top: "46vh",
 };
 const textStyle2: React.CSSProperties = {
-  fontSize: "10vh",
-  position: "fixed",
-  top: "56vh",
-  width: "100vw",
-  textAlign: "center",
+  top: "62vh",
 };

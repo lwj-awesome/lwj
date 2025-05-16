@@ -19,6 +19,11 @@
 .size_2xl {
   font-size: var(--font-size-2xl);
 }
+@media (max-width: 639px) {
+  .size_2xl {
+    font-size: var(--font-size-xl); /* 640px 미만에서는 12px 적용 */
+  }
+}
 
 .light {
   font-weight: var(--font-weight-light);

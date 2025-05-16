@@ -1,6 +1,7 @@
 "use client";
 
 import { useTheme } from "@/hooks/useTheme";
+import Image from "next/image";
 
 export default function ThemeToggleButton() {
   const { theme, toggleTheme } = useTheme();
@@ -8,9 +9,9 @@ export default function ThemeToggleButton() {
   return (
     <button onClick={toggleTheme} className="px-4 py-2 cursor-pointer">
       {theme === "dark" ? (
-        <img src="/images/lightmode.png" width={40} />
+        <Image width={40} height={40} src="/images/lightmode.png" alt="" />
       ) : (
-        <img src="/images/darkmode.png" width={40} />
+        <Image width={40} height={40} src="/images/darkmode.png" alt="" />
       )}
     </button>
   );

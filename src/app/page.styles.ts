@@ -3,7 +3,7 @@ import clsx from "clsx";
 export const experiecntSectionLayoutStyle = clsx(
   "sm:p-custom-gap-xxl",
   "p-custom-gap-md",
-  "h-[600vh]",
+  "h-[700vh]",
   "w-full"
 );
 
@@ -17,13 +17,7 @@ export const experienceSectionStyle = clsx(
   "sm:w-[40%]"
 );
 
-export const experienceSectionBoxStyle = clsx(
-  "sticky",
-  "top-[8rem]",
-  "sm:w-[50%]",
-  "sm:left-[100rem]",
-  "w-[100%]"
-);
+export const experienceSectionBoxStyle = clsx("sticky", "top-[8rem]");
 
 export const projectSectionStyle = clsx(
   "smflex",

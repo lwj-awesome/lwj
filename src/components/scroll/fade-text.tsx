@@ -34,30 +34,37 @@ export default function FadeText({
         start: [sections.fadeIn.start, 0],
         end: [sections.fadeIn.end, 1],
       }),
-      transform: `translate3d(0, ${calculateScroll(scrollY, scrollHeight, {
-        start: [sections.fadeIn.start, 20],
-        end: [sections.fadeIn.end, 0],
-      })}%, 0)`,
+      transform: `translateX(-50%) translate3d(0, ${calculateScroll(
+        scrollY,
+        scrollHeight,
+        {
+          start: [sections.fadeIn.start, 20],
+          end: [sections.fadeIn.end, 0],
+        }
+      )}%, 0)`,
     },
     fadeOut: {
       opacity: calculateScroll(scrollY, scrollHeight, {
         start: [sections.fadeOut.start, 1],
         end: [sections.fadeOut.end, 0],
       }),
-      transform: `translate3d(0, ${calculateScroll(scrollY, scrollHeight, {
-        start: [sections.fadeOut.start, 0],
-        end: [sections.fadeOut.end, -30],
-      })}%, 0)`,
+      transform: `translateX(-50%) translate3d(0, ${calculateScroll(
+        scrollY,
+        scrollHeight,
+        {
+          start: [sections.fadeOut.start, 0],
+          end: [sections.fadeOut.end, -30],
+        }
+      )}%, 0)`,
     },
   };
 
   // 공통 스타일
   const fadeStyle: React.CSSProperties = {
-    fontSize: "10vh",
+    fontSize: "5rem",
     position: "fixed",
     top: "40vh",
-    width: "100vw",
-    textAlign: "center",
+    left: "50%",
   };
   return (
     <>

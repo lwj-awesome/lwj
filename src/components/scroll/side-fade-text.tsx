@@ -35,41 +35,57 @@ export default function SideFadeText({
         end: [sections.fadeIn.end, 1],
       }),
       transform: isLeft
-        ? `translate3d(${calculateScroll(scrollY, scrollHeight, {
-            start: [sections.fadeIn.start, 20],
-            end: [sections.fadeIn.end, 0],
-          })}%,0, 0)`
-        : `translate3d(-${calculateScroll(scrollY, scrollHeight, {
-            start: [sections.fadeIn.start, 20],
-            end: [sections.fadeIn.end, 0],
-          })}%,0, 0)`,
+        ? `translateX(-50%) translate3d(${calculateScroll(
+            scrollY,
+            scrollHeight,
+            {
+              start: [sections.fadeIn.start, 200],
+              end: [sections.fadeIn.end, 0],
+            }
+          )}%,0, 0)`
+        : `translateX(-50%) translate3d(-${calculateScroll(
+            scrollY,
+            scrollHeight,
+            {
+              start: [sections.fadeIn.start, 200],
+              end: [sections.fadeIn.end, 0],
+            }
+          )}%,0, 0)`,
     },
     fadeFullOut: {
       opacity: calculateScroll(scrollY, scrollHeight, {
-        start: [sections.fadeFullOut.start, 1],
+        start: [sections.fadeFullOut.start, 200],
         end: [sections.fadeFullOut.end, 0],
       }),
       transform: isLeft
-        ? `translate3d(-${calculateScroll(scrollY, scrollHeight, {
-            start: [sections.fadeFullOut.start, 0],
-            end: [sections.fadeFullOut.end, 30],
-          })}%,0, 0)`
-        : `translate3d(${calculateScroll(scrollY, scrollHeight, {
-            start: [sections.fadeFullOut.start, 0],
-            end: [sections.fadeFullOut.end, 30],
-          })}%,0, 0)`,
+        ? `translateX(-50%) translate3d(-${calculateScroll(
+            scrollY,
+            scrollHeight,
+            {
+              start: [sections.fadeFullOut.start, 0],
+              end: [sections.fadeFullOut.end, 200],
+            }
+          )}%,0, 0)`
+        : `translateX(-50%) translate3d(${calculateScroll(
+            scrollY,
+            scrollHeight,
+            {
+              start: [sections.fadeFullOut.start, 0],
+              end: [sections.fadeFullOut.end, 200],
+            }
+          )}%,0, 0)`,
     },
   };
 
   // 공통 스타일
   const sideFadeTextStyle: React.CSSProperties = {
-    width: "100vw",
-    textAlign: "center",
-    fontSize: "10vh",
     position: "fixed",
+    fontSize: "4rem",
+    left: "50%",
   };
+
   return (
-    <>
+    <div>
       {ratio >= sections.fadeIn.start && ratio <= sections.fadeIn.end && (
         <h1
           style={{ ...sideFadeTextStyle, ...style, ...animationStyles.fadeIn }}
@@ -88,6 +104,6 @@ export default function SideFadeText({
           {children}
         </h1>
       )}
-    </>
+    </div>
   );
 }

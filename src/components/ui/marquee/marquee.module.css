@@ -1,9 +1,9 @@
 .marquee_wrapper {
   overflow: hidden;
   white-space: nowrap;
-  padding: 2rem;
+  padding: 1rem;
   position: relative;
-  height: 15vh;
+  height: 12vh;
 
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
@@ -22,20 +22,22 @@
     black 90%,
     transparent
   );
+  width: 100%;
 }
 .marquee {
   display: flex;
   flex-direction: row;
-  gap: 8rem;
+  gap: 4rem;
   font-size: 3rem;
   will-change: transform;
 }
+
 .left {
-  animation: scroll-left 50s linear infinite;
+  animation: scroll-left 10s linear infinite;
 }
 
 .right {
-  animation: scroll-right 50s linear infinite;
+  animation: scroll-right 10s linear infinite;
 }
 
 @keyframes scroll-left {

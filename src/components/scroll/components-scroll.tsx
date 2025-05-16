@@ -8,10 +8,7 @@ interface ComopnentScrollGroupProps {
   scrollHeight: number;
   scrollY: number;
 }
-const componentGroupStyle: React.CSSProperties = {
-  position: "sticky",
-  top: "5rem",
-};
+
 export default function ComopnentScrollGroup({
   children,
   endRatio,
@@ -19,16 +16,13 @@ export default function ComopnentScrollGroup({
   scrollY,
   startRatio,
 }: ComopnentScrollGroupProps) {
-  const ratio = scrollY / scrollHeight;
-  if (ratio < startRatio || ratio > endRatio + 0.1) return null;
-
   const childrenCount = React.Children.count(children);
   const childrenStyles:
     | (React.CSSProperties | undefined)[]
     | { opacity: number; top: string }[] = [];
 
   let currentStartRatio = startRatio;
-  // children의 개수로 끝 - 시작 값을 나눠서 구간을 children개수로 등분
+  // children의 수 로 끝 - 시작 값을 나눠서 구간을 children개수로 등분
   const beforeRatio = (endRatio - startRatio) / childrenCount;
   for (let i = 0; i < childrenCount; i++) {
     let opacity = calculateScroll(scrollY, scrollHeight, {
@@ -49,7 +43,7 @@ export default function ComopnentScrollGroup({
     if (i === childrenCount - 1) {
       const fadeOut = calculateScroll(scrollY, scrollHeight, {
         start: [endRatio, 1],
-        end: [endRatio + 0.2, 0],
+        end: [endRatio + 0.2, 1],
       });
       opacity = Math.min(opacity, fadeOut);
     }
@@ -58,13 +52,12 @@ export default function ComopnentScrollGroup({
       opacity,
       transform: `translateY(${translateY}px)`,
       top: `${top}px`,
-      left: "50%",
-      padding: "1rem",
+      padding: "10px 0",
     });
     currentStartRatio += beforeRatio;
   }
   return (
-    <div style={componentGroupStyle}>
+    <div>
       {React.Children.map(children, (child, index) => (
         <div key={index} style={childrenStyles[index]}>
           {child}

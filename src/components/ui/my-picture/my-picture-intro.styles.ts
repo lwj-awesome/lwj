@@ -1,16 +1,27 @@
 import clsx from "clsx";
 
 export const pictureLayoutStyle = clsx(
-  "w-full",
+  "sm:w-full",
   "flex",
-  "flex-col",
-  "gap-custom-gap-lg",
-  "pt-[10rem]",
-  "items-center"
+  "sm:flex-row",
+  "sm:justify-around",
+  "sm:items-center",
+  "sm:p-custom-padding-xxl"
 );
 
+export const textLayoutStyle = clsx(
+  "flex",
+  "flex-col",
+  "gap-custom-gap-md",
+  "items-center"
+);
+export const dotStyle = clsx("text-custom-point-color");
+
 export const pictureImgStyle = clsx(
-  "  sm:w-[40rem]",
-  "sm:h-[40rem]",
-  "rounded-custom-border-radius"
+  "sm:w-[20rem]",
+  "sm:h-[20rem]",
+  "sm:rounded-custom-border-radius",
+  "sm:border-3 border-custom-point-color",
+  "sm:block",
+  "hidden"
 );

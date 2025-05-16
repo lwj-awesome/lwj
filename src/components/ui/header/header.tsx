@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import Text from "../text-module/text-module";
 import ThemeToggleButton from "../toggle-button/toggle-button";
@@ -5,8 +6,9 @@ import {
   headerContentStyle,
   headerMainStyle,
   headerMobileContentStyle,
-  headerStyle,
 } from "./header.style";
+import { useEffect, useState } from "react";
+import Image from "next/image";
 
 interface HeaderProps {
   moveToExperience?: () => void;
@@ -48,12 +50,33 @@ export default function Header({
   moveToIntro,
   isHome = true,
 }: HeaderProps) {
+  const [showHeader, setShowHeader] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentY = window.scrollY;
+
+      if (currentY > lastScrollY) {
+        setShowHeader(false);
+      } else {
+        setShowHeader(true);
+      }
+
+      setLastScrollY(currentY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
   return (
-    <header className={headerStyle}>
+    <div
+      className={`w-fit fixed top-0 left-[50%] translate-x-[-50%]  z-50 transition-transform duration-300
+      ${showHeader ? "translate-y-[20px]" : "-translate-y-full"}
+    `}
+    >
       <main className={headerMainStyle}>
-        <div>
-          <img src="/images/logo.png" width="90" height="90" alt="Logo" />
-        </div>
+        <Image width={80} height={80} src="/images/logo.png" alt="" />
         <div className={headerContentStyle}>
           {isHome ? (
             <HomeHeader
@@ -64,9 +87,8 @@ export default function Header({
           ) : (
             <DetailHeader />
           )}
-          <div>
-            <ThemeToggleButton />
-          </div>
+
+          <ThemeToggleButton />
         </div>
         {/* mobile */}
         <div className={headerMobileContentStyle}>
@@ -77,11 +99,9 @@ export default function Header({
           ) : (
             <DetailHeader />
           )}
-          <div>
-            <ThemeToggleButton />
-          </div>
+          <ThemeToggleButton />
         </div>
       </main>
-    </header>
+    </div>
   );
 }

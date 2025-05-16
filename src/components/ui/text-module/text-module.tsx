@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import styles from "./text.module.css";
 import { CommonComponentsProps } from "@/types/types";
+import { clsx } from "clsx";
 
 export type TextProps = {
   children: ReactNode;
@@ -22,13 +23,13 @@ export default function Text({
   const Tag = as;
   return (
     <Tag
-      className={`
-        ${styles.text} 
-        ${styles[size]} 
-        ${styles[weight]} 
-        ${styles[type]} 
-        ${className}
-      `}
+      className={clsx(
+        styles.text,
+        styles[size],
+        styles[weight],
+        styles[type],
+        className
+      )}
     >
       {children}
     </Tag>
@@ -44,7 +45,7 @@ function Title({
       as="h1"
       type="title"
       weight="bold"
-      size="size_2xl"
+      size={"size_2xl"}
       className={className}
     >
       {children}
@@ -56,7 +57,7 @@ function SubTitle({
   className,
 }: CommonComponentsProps & { className?: string }) {
   return (
-    <Text as="h2" type="title" className={className} weight="bold" size="lg">
+    <Text as="h2" type="title" className={className} weight="bold" size="base">
       {children}
     </Text>
   );
