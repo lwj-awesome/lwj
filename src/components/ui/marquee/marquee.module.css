@@ -3,7 +3,7 @@
   white-space: nowrap;
   padding: 1rem;
   position: relative;
-  height: 12vh;
+  height: fit-content;
 
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
@@ -33,11 +33,11 @@
 }
 
 .left {
-  animation: scroll-left 30s linear infinite;
+  animation: scroll-left 40s linear infinite;
 }
 
 .right {
-  animation: scroll-right 30s linear infinite;
+  animation: scroll-right 40s linear infinite;
 }
 
 @keyframes scroll-left {

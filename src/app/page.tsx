@@ -65,7 +65,6 @@ export default function Home() {
           )}
         </article>
       </section>
-
       <section
         className="h-[500vh] p-c-gap-md w-full sm:p-c-gap-xxl"
         ref={projectRef}

@@ -1,10 +1,12 @@
-import Marquee from "@/components/ui/marquee/marquee";
-
 import { Detail } from "@/components/ui/detail-item/detail-item";
 import { ColorDot } from "@/components/atom/color-dot";
 import Text from "@/components/atom/text-module/text-module";
+import { LogoType } from "@/types/types";
+import { BlurMarquee } from "@/components/ui/marquee/marquee";
 
 export default function Page() {
+  const exceptSkill: LogoType[] = ["Tailwind Css"];
+
   return (
     <>
       <Detail>
@@ -50,21 +52,8 @@ export default function Page() {
         </Detail.desc>
       </Detail>
 
-      <div className="bg-c-box-layout-color rounded-c-border-radius p-c-padding  ">
-        <div className="relative group h-fit overflow-hidden ">
-          <div className="hover:blur-lg transition duration-300">
-            <Marquee />
-            <Marquee direction="right" />
-          </div>
-          <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 flex justify-center">
-            <div className="opacity-0 translate-y-full group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-700 ease-out">
-              <p className="text-center text-lg font-semibold text-gray-900 bg-white/80 px-4 py-2 rounded shadow-md">
-                올라오는 텍스트
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <BlurMarquee exceptSkill={exceptSkill} />
+
       <Detail>
         <Detail.title>keyPoint1 </Detail.title>
         <Detail.desc>

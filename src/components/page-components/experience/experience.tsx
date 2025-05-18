@@ -2,7 +2,7 @@ import ComopnentScrollGroup from "@/components/scroll/components-scroll";
 import { VisibleSectionsProps } from "@/types/types";
 import { Box } from "@/components/atom/box/box-layout";
 import Text from "@/components/atom/text-module/text-module";
-import Marquee from "@/components/ui/marquee/marquee";
+import { BlurMarquee } from "@/components/ui/marquee/marquee";
 
 export default function Experience({
   visibleSections,
@@ -77,10 +77,7 @@ export default function Experience({
               </Box>
               {/* Stack */}
               <div className="rounded-c-border-radius p-c-padding bg-c-box-layout-color ">
-                <div className="w-[720px]">
-                  <Marquee direction="right" />
-                  <Marquee />
-                </div>
+                <BlurMarquee className="w-[720px] " />
               </div>
             </ComopnentScrollGroup>
           </div>
