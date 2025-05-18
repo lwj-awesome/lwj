@@ -16,7 +16,7 @@ export default function Project({
     >
       <div className="flex flex-col items-center gap-c-gap-lg">
         <ComopnentScrollGroup
-          startRatio={0.4}
+          startRatio={0.2}
           endRatio={0.8}
           scrollHeight={visibleSections?.[0]["project"]?.sectionHeight}
           scrollY={visibleSections?.[0]["project"]?.scrollPosition}
