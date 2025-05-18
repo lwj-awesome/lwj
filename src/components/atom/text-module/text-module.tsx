@@ -1,8 +1,7 @@
 import { ReactNode } from "react";
-import styles from "./text.module.css";
 import { CommonComponentsProps } from "@/types/types";
 import { clsx } from "clsx";
-
+import styles from "./text.module.css";
 export type TextProps = {
   children: ReactNode;
   as?: "p" | "h1" | "h2" | "h3";
@@ -85,6 +84,17 @@ function Description({
     </Text>
   );
 }
+function subDescription({
+  children,
+  className,
+}: CommonComponentsProps & { className?: string }) {
+  return (
+    <Text as="p" type="description" className={className} size="base">
+      {children}
+    </Text>
+  );
+}
+
 function MarqueeText({
   children,
   className,
@@ -99,5 +109,6 @@ function MarqueeText({
 Text.title = Title;
 Text.subTitle = SubTitle;
 Text.description = Description;
+Text.subDesc = subDescription;
 Text.header = HeaderText;
 Text.marquee = MarqueeText;

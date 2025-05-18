@@ -23,55 +23,67 @@
 
   /* color */
   --color-black: #0e0e0e;
-  --color-dark: #151515;
-  --color-darkgray: #1b1b1b;
+  --color-black-50: #262626;
+  --color-black-100: #151515;
 
-  --color-main-white: rgb(255, 255, 255);
-  --color-sub-white: rgb(200, 212, 237);
+  --color-white: #f5f5f5;
+  --color-white-50: #d0d0d0;
+  --color-white-100: #ededed;
 
-  --color-main-slate-blue: rgb(90, 107, 122);
-  --color-main-gold: rgb(185, 146, 95);
+  --color-gray-30: #e5e5e5;
+  --color-gray-50: #d4d4d4;
+  --color-gray-100: #898686;
+  --color-gray-150: #525252;
 
-  --color-main-beige: rgb(251, 247, 241);
-  --color-sub-beige: rgb(254, 234, 201);
-  --color-third-beige: rgb(214, 197, 171);
-
-  --color-main-gray: rgb(97, 112, 136);
+  --color-gold-50: #c5ad8c;
+  --color-gold-100: #b9925f;
+}
+.dark {
+  --color-c-background: var(--color-black);
+  --color-c-foreground: var(--color-white);
+  --color-c-description-text-color: var(--color-gray-100);
+  --color-c-image-bg-color: var(--color-gold-100);
+  --color-c-header-bg-color: var(--color-black-50);
+  --color-c-border-color: var(--color-gold-100);
+  --color-c-point-color: var(--color-gold-100);
+  --color-c-box-bg-color: var(--color-black-50);
+  --color-c-box-layout-color: var(--color-black-100);
 }
 
 @theme {
-  --color-custom-background: var(--color-main-beige);
-  --color-custom-foreground: var(--color-dark);
-  --color-custom-border-color: var(--color-main-slate-blue);
-  --color-custom-description-text-color: var(--color-main-gray);
-  --color-custom-header-bg-color: var(--color-sub-beige);
-  --color-custom-point-color: var(--color-main-gold);
-  --color-custom-box-bg-color: var(--color-sub-beige);
-  --color-custom-box-layout-color: var(--color-third-beige);
+  --color-c-background: var(--color-white);
+  --color-c-foreground: var(--color-black-50);
+  --color-c-description-text-color: var(--color-gray-100);
+  --color-c-image-bg-color: var(--color-gold-50);
+  --color-c-header-bg-color: var(--color-gray-50);
+  --color-c-border-color: var(--color-gold-50);
+  --color-c-point-color: var(--color-gold-50);
+  --color-c-box-layout-color: var(--color-gray-30);
+  --color-c-box-bg-color: var(--color-gray-50);
 
   /* spacing */
-  --spacing-custom-gap-md: var(--spacing-md);
-  --spacing-custom-gap-lg: var(--spacing-xl);
-  --spacing-custom-gap-xxl: var(--spacing-xxl);
-  --spacing-custom-padding: var(--spacing-lg);
-  --spacing-custom-padding-md: var(--spacing-md);
-  --spacing-custom-padding-xxl: var(--spacing-xxl);
+  --spacing-c-gap-md: var(--spacing-md);
+  --spacing-c-gap-lg: var(--spacing-xl);
+  --spacing-c-gap-xxl: var(--spacing-xxl);
+  --spacing-c-padding: var(--spacing-lg);
+  --spacing-c-padding-md: var(--spacing-md);
+  --spacing-c-padding-xxl: var(--spacing-xxl);
 
-  --radius-custom-border-radius: 1rem;
-  --radius-custom-image-radius: 1rem;
+  --radius-c-border-radius: 1rem;
+  --radius-c-image-radius: 1rem;
 
   /* font Size */
-  --font-custom-big-font-size: var(--font-size-3xl);
-  --font-custom-middle-font-size: var(--font-size-2xl);
-  --font-custom-title-font-size: var(--font-size-xl);
-  --font-custom-description-font-size: var(--font-size-base);
+  --font-c-big-font-size: var(--font-size-3xl);
+  --font-c-middle-font-size: var(--font-size-2xl);
+  --font-c-title-font-size: var(--font-size-xl);
+  --font-c-description-font-size: var(--font-size-base);
 
   /* animation */
   --animate-fadeUp: fadeUp 1s ease-out forwards;
   @keyframes fadeUp {
     0% {
       opacity: 0;
-      transform: translateY(30px);
+      transform: translateY(50px);
     }
     100% {
       opacity: 1;
@@ -87,25 +99,15 @@
     }
     100% {
       opacity: 0;
-      transform: translateY(30px);
+      transform: translateY(10px);
     }
   }
-}
-.dark {
-  --color-custom-background: var(--color-black);
-  --color-custom-foreground: var(--color-sub-white);
-  --color-custom-border-color: var(--color-main-gray);
-  --color-custom-description-text-color: var(--color-main-gray);
-  --color-custom-header-bg-color: var(--color-dark);
-  --color-custom-point-color: var(--color-main-gold);
-  --color-custom-box-bg-color: var(--color-darkgray);
-  --color-custom-box-layout-color: var(--color-dark);
 }
 
 html,
 body {
-  background: var(--color-custom-background);
-  color: var(--color-custom-foreground);
+  background: var(--color-c-background);
+  color: var(--color-c-foreground);
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

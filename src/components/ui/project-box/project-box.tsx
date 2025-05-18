@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { CommonComponentsProps } from "@/types/types";
-import { projectContentStyle, projectLayoutStyle } from "./project-box-styles";
+import { Box } from "@/components/atom/box/box-layout";
+import Image from "next/image";
 
 export default function Project({
   children,
@@ -12,18 +13,25 @@ export default function Project({
 }) {
   return (
     <Link href={href}>
-      <div className={projectLayoutStyle}>{children}</div>
+      <Box
+        colorType="none"
+        className="h-[420px] flex flex-col gap-c-gap-lg items-center"
+      >
+        {children}
+      </Box>
     </Link>
   );
 }
 
-function Image({ src }: { src: string }) {
-  return <img src={src} alt="" width="200" />;
+function ImageComponent({ src }: { src: string }) {
+  return <Image src={src} width={200} height={200} alt="" />;
 }
 
 function Content({ children }: CommonComponentsProps) {
-  return <div className={projectContentStyle}>{children}</div>;
+  return (
+    <div className="flex flex-col gap-c-gap-md items-center">{children}</div>
+  );
 }
 
-Project.img = Image;
+Project.img = ImageComponent;
 Project.content = Content;

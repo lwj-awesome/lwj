@@ -7,8 +7,8 @@ export default function DetailLayout({
 }) {
   return (
     <>
-      {/* <Header isHome={false} /> */}
-      <div>{children}</div>
+      <Header isHome={false} />
+      <div className="m-32">{children}</div>
     </>
   );
 }

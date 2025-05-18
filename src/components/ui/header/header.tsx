@@ -1,14 +1,10 @@
 "use client";
 import Link from "next/link";
-import Text from "../text-module/text-module";
-import ThemeToggleButton from "../toggle-button/toggle-button";
-import {
-  headerContentStyle,
-  headerMainStyle,
-  headerMobileContentStyle,
-} from "./header.style";
+import Text from "../../atom/text-module/text-module";
+import ThemeToggleButton from "../../atom/toggle-button/toggle-button";
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import { Box } from "@/components/atom/box/box-layout";
 
 interface HeaderProps {
   moveToExperience?: () => void;
@@ -75,9 +71,12 @@ export default function Header({
       ${showHeader ? "translate-y-[20px]" : "-translate-y-full"}
     `}
     >
-      <main className={headerMainStyle}>
+      <Box
+        colorType="header"
+        className="h-[80px] flex justify-between items-center sm:px-[30px] sm:gap-c-gap-lg "
+      >
         <Image width={80} height={80} src="/images/logo.png" alt="" />
-        <div className={headerContentStyle}>
+        <div className="flex flex-row items-center gap-c-gap-xxl ">
           {isHome ? (
             <HomeHeader
               moveToExperience={moveToExperience}
@@ -91,7 +90,7 @@ export default function Header({
           <ThemeToggleButton />
         </div>
         {/* mobile */}
-        <div className={headerMobileContentStyle}>
+        <div className="flex flex-row justify-between items-center sm:hidden">
           {isHome ? (
             <div onClick={moveToIntro}>
               <Text.header>TOP</Text.header>
@@ -101,7 +100,7 @@ export default function Header({
           )}
           <ThemeToggleButton />
         </div>
-      </main>
+      </Box>
     </div>
   );
 }

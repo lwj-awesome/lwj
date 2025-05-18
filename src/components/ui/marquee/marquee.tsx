@@ -1,4 +1,4 @@
-import Text from "../text-module/text-module";
+import Text from "@/components/atom/text-module/text-module";
 import styles from "./marquee.module.css";
 
 export default function Marquee({

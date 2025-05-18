@@ -1,4 +1,4 @@
-import Text from "@/components/ui/text-module/text-module";
+import Text from "@/components/atom/text-module/text-module";
 import Marquee from "@/components/ui/marquee/marquee";
 
 export default function Page() {

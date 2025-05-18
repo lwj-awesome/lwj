@@ -1,10 +1,11 @@
-import Project from "../project-box/project-box";
-import Text from "../text-module/text-module";
+import Text from "@/components/atom/text-module/text-module";
+import Project from "@/components/ui/project-box/project-box";
 
-export function Nci() {
+//  <Project.ImageBox src="/images/servicedesk2.png" />
+export function ServiceDesk() {
   return (
-    <Project href="/detail/nci">
-      <Project.img src="/images/nci2.png" />
+    <Project href="/detail/nsd">
+      <Project.img src="/images/servicedesk2.png" />
       <Project.content>
         <Text.subTitle>Rock-Paper-Scissors Game</Text.subTitle>
         <Text.description>
