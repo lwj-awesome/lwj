@@ -77,7 +77,7 @@ export default function Page() {
           </Text.subDesc>
         </Detail.desc>
       </Detail>
-      <div className="flex gap-c-gap-xxl ">
+      <div className="lg:flex lg:gap-c-gap-xxl ">
         <Detail className="flex-1/2">
           <Detail.title>Learn</Detail.title>
           <Detail.desc>
@@ -149,7 +149,7 @@ export default function Page() {
           </Text.subDesc>
         </Detail.desc>
       </Detail>
-      <div className="flex gap-c-gap-xxl ">
+      <div className="lg:flex gap-c-gap-xxl ">
         <Detail className="flex-1/2">
           <Detail.title>Learn</Detail.title>
           <Detail.desc>

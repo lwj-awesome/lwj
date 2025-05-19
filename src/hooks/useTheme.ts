@@ -7,7 +7,7 @@ export function useTheme() {
 
   useEffect(() => {
     const storedTheme =
-      (localStorage.getItem("theme") as "dark" | "light") || "light";
+      (localStorage?.getItem("theme") as "dark" | "light") || "light";
     setTheme(storedTheme);
   }, []);
 

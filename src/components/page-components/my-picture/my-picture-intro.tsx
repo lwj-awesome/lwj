@@ -13,7 +13,7 @@ export default function MyPicture({
     <article
       className={`section ${visibleSections?.[0]?.["myPicture"] && "visible"}`}
     >
-      <div className="flex sm:w-full sm:flex-row sm:gap-c-gap-xxl sm:items-center sm:p-c-padding-xxl">
+      <div className="flex flex-col-reverse items-center  lg:w-full lg:flex-row lg:gap-c-gap-xxl lg:items-center lg:p-c-padding-xxl">
         <div className="flex flex-col gap-c-gap-md items-center">
           <ComopnentScrollGroup
             startRatio={0.1}
@@ -21,7 +21,7 @@ export default function MyPicture({
             scrollHeight={visibleSections?.[0]["myPicture"]?.sectionHeight}
             scrollY={visibleSections?.[0]["myPicture"]?.scrollPosition}
           >
-            <Text.title>
+            <Text.title className="">
               사용자에게 <ColorDot>*</ColorDot> 가치를 더하고 싶은
             </Text.title>
           </ComopnentScrollGroup>
@@ -44,7 +44,7 @@ export default function MyPicture({
             scrollHeight={visibleSections?.[0]["myPicture"]?.sectionHeight}
             scrollY={visibleSections?.[0]["myPicture"]?.scrollPosition}
           >
-            <div className="flex flex-col gap-c-gap-md items-center">
+            <div className="hidden sm:hidden md:flex md:flex-col md:gap-c-gap-md md:items-center">
               <Text.description>
                 저는 사용자에게 도움이 되는 개발을 하고 싶습니다. 사람들이 제가
                 만든 웹사이트를 쓰면서 즐거워지는게 제 목표입니다
@@ -62,10 +62,7 @@ export default function MyPicture({
           scrollHeight={visibleSections?.[0]["myPicture"]?.sectionHeight}
           scrollY={visibleSections?.[0]["myPicture"]?.scrollPosition}
         >
-          <Box
-            colorType="img"
-            className="hidden md:w-[20rem] md:h-[20rem] md:block "
-          >
+          <Box colorType="img" className=" w-[20rem] h-[20rem]">
             img
           </Box>
         </ComopnentScrollGroup>

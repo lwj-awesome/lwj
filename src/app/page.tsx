@@ -59,7 +59,7 @@ export default function Home() {
         className="h-[700vh] p-c-gap-md w-full sm:p-c-gap-xxl"
         ref={experienceRef}
       >
-        <article className="sticky top-[8rem]">
+        <article className="sticky lg:top-[8rem] top-[2rem]">
           {visibleSections?.[0]?.["experience"] && (
             <Experience visibleSections={visibleSections} />
           )}

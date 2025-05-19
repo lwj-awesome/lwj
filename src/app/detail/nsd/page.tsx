@@ -29,7 +29,7 @@ export default function Page() {
         </Detail.desc>
       </Detail>
 
-      <div className="flex  gap-c-gap-xxl">
+      <div className="lg:flex  lg:gap-c-gap-xxl">
         <Detail className="flex-1/2">
           <Detail.title>Check</Detail.title>
           <Detail.desc>

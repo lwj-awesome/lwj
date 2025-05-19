@@ -15,11 +15,11 @@ export function LogoBox({ src, name, except }: LogoBoxProps) {
       <Box
         colorType="box"
         className={clsx(
-          "flex justify-around gap-c-gap-md items-center w-[210px] h-[80px] px-3"
+          "flex justify-around gap-c-gap-md items-center w-[100px] lg:w-[210px] h-[80px] px-3"
         )}
       >
         <Image src={src} width={50} height={50} alt="" />
-        <Text.subTitle>{name}</Text.subTitle>
+        <Text.subTitle className="hidden lg:block">{name}</Text.subTitle>
       </Box>
     </div>
   );

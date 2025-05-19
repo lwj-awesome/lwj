@@ -10,6 +10,11 @@
 .base {
   font-size: var(--font-size-base);
 }
+@media (max-width: 800px) {
+  .base {
+    font-size: var(--font-size-sm);
+  }
+}
 .lg {
   font-size: var(--font-size-lg);
 }
@@ -19,9 +24,14 @@
 .size_2xl {
   font-size: var(--font-size-2xl);
 }
-@media (max-width: 639px) {
+@media (max-width: 767px) {
   .size_2xl {
-    font-size: var(--font-size-xl); /* 640px 미만에서는 12px 적용 */
+    font-size: var(--font-size-xl);
+  }
+}
+@media (max-width: 1235px) {
+  .size_2xl {
+    font-size: var(--font-size-1-5xl);
   }
 }
 

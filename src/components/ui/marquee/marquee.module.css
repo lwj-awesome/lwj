@@ -58,7 +58,7 @@
   }
 }
 
-@media (max-width: 880px) {
+@media (max-width: 767px) {
   .marquee_wrapper {
     padding: 0.6rem;
   }

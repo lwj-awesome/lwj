@@ -10,7 +10,7 @@ export function Box({ children, colorType, className }: Boxprops) {
     header: "bg-c-header-bg-color",
     box: "bg-c-box-bg-color",
     point: "bg-c-point-color",
-    img: "md:border-3 md:border-c-border-color",
+    img: "border-3 border-c-border-color",
     none: "bg-c-box-layout-color",
   };
   return (

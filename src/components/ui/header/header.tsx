@@ -5,6 +5,7 @@ import ThemeToggleButton from "../../atom/toggle-button/toggle-button";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { Box } from "@/components/atom/box/box-layout";
+import clsx from "clsx";
 
 interface HeaderProps {
   moveToExperience?: () => void;
@@ -35,7 +36,9 @@ function HomeHeader({
 function DetailHeader() {
   return (
     <Link href={"/"}>
-      <Text.header>HOME</Text.header>
+      <Text as="h3" size="lg" weight="medium">
+        HOME
+      </Text>
     </Link>
   );
 }
@@ -73,10 +76,12 @@ export default function Header({
     >
       <Box
         colorType="header"
-        className="h-[80px] flex justify-between items-center sm:px-[30px] sm:gap-c-gap-lg "
+        className={clsx(
+          `w-[50vw] h-[80px]  flex justify-around items-center sm:px-[30px] sm:gap-c-gap-lg`
+        )}
       >
         <Image width={80} height={80} src="/images/logo.png" alt="" />
-        <div className="flex flex-row items-center gap-c-gap-xxl ">
+        <div className="hidden xl:flex xl:flex-row   lg:gap-c-gap-xxl ">
           {isHome ? (
             <HomeHeader
               moveToExperience={moveToExperience}
@@ -86,20 +91,20 @@ export default function Header({
           ) : (
             <DetailHeader />
           )}
-
-          <ThemeToggleButton />
         </div>
         {/* mobile */}
-        <div className="flex flex-row justify-between items-center sm:hidden">
+        <div className="flex flex-row items-center  xl:hidden">
           {isHome ? (
             <div onClick={moveToIntro}>
-              <Text.header>TOP</Text.header>
+              <Text as="h3" size="lg" weight="medium">
+                TOP
+              </Text>
             </div>
           ) : (
             <DetailHeader />
           )}
-          <ThemeToggleButton />
         </div>
+        <ThemeToggleButton />
       </Box>
     </div>
   );

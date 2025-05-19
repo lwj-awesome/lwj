@@ -48,14 +48,16 @@ export function BlurMarquee({
     >
       <div className="hover:blur-lg transition duration-300">
         <Marquee except={exceptSkill} />
-        <Marquee direction="right" except={exceptSkill} />
+        <div className="hidden lg:block">
+          <Marquee direction="right" except={exceptSkill} />
+        </div>
       </div>
-      <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 flex justify-center">
+      <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 flex justify-center ">
         <div className="opacity-0 translate-y-full group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-700 ease-out">
-          <div className="text-center text-lg font-semibold text-gray-900 bg-white/80 px-4 py-2 rounded shadow-md">
+          <div className="text-center text-lg font-semibold text-gray-900 bg-white/80 px-4 py-2  shadow-md">
             {execptLogoList.map((item) => (
               <span key={item.key}>
-                <Text.subTitle>- {item.name}</Text.subTitle>
+                <Text.description>- {item.name}</Text.description>
               </span>
             ))}
           </div>

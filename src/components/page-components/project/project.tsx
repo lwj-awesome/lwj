@@ -23,7 +23,7 @@ export default function Project({
         >
           <Text.title>PROJECT</Text.title>
         </ComopnentScrollGroup>
-        <div className="flex gap-c-gap-md">
+        <div className="flex lg:flex-row flex-col gap-c-gap-md">
           <ComopnentScrollGroup
             startRatio={0.1}
             endRatio={0.3}
