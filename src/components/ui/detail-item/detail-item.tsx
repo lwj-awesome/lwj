@@ -25,10 +25,20 @@ function Description({ children }: CommonComponentsProps) {
   return <div className="flex flex-col gap-c-gap-md">{children}</div>;
 }
 
-function ImageComponent({ src, clasName }: { src: string; clasName?: string }) {
+function ImageComponent({
+  src,
+  clasName,
+  width = 200,
+  height = 200,
+}: {
+  src: string;
+  clasName?: string;
+  width?: number;
+  height?: number;
+}) {
   return (
     <div className={clsx("flex items-center justify-center", clasName)}>
-      <Image src={src} width={200} height={200} alt="" />
+      <Image src={src} width={width} height={height} alt="" />
     </div>
   );
 }

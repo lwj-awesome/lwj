@@ -15,7 +15,7 @@ export default function Project({
     <Link href={href}>
       <Box
         colorType="none"
-        className="h-[420px] flex flex-col gap-c-gap-lg items-center"
+        className="h-[420px] flex flex-col justify-between items-center"
       >
         {children}
       </Box>
@@ -23,13 +23,21 @@ export default function Project({
   );
 }
 
-function ImageComponent({ src }: { src: string }) {
-  return <Image src={src} width={200} height={200} alt="" />;
+function ImageComponent({
+  src,
+  width = 200,
+  height = 200,
+}: {
+  src: string;
+  width?: number;
+  height?: number;
+}) {
+  return <Image src={src} width={width} height={height} alt="" />;
 }
 
 function Content({ children }: CommonComponentsProps) {
   return (
-    <div className="flex flex-col gap-c-gap-md items-center">{children}</div>
+    <div className=" flex flex-col gap-c-gap-md items-center">{children}</div>
   );
 }
 

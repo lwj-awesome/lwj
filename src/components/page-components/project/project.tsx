@@ -4,6 +4,8 @@ import Text from "../../atom/text-module/text-module";
 
 import { ServiceDesk } from "../servicedesk-project/servicedesk-project";
 import { Nci } from "../nci-project/nci-project";
+import { MyPjt } from "../myPjt/my-pjt";
+import { Giggy } from "../giggy/giggy-project";
 
 export default function Project({
   visibleSections,
@@ -30,7 +32,7 @@ export default function Project({
             scrollHeight={visibleSections?.[0]["project"]?.sectionHeight}
             scrollY={visibleSections?.[0]["project"]?.scrollPosition}
           >
-            <ServiceDesk />
+            <MyPjt />
           </ComopnentScrollGroup>
 
           <ComopnentScrollGroup
@@ -39,7 +41,7 @@ export default function Project({
             scrollHeight={visibleSections?.[0]["project"]?.sectionHeight}
             scrollY={visibleSections?.[0]["project"]?.scrollPosition}
           >
-            <Nci />
+            <Giggy />
           </ComopnentScrollGroup>
           <ComopnentScrollGroup
             startRatio={0.1}

@@ -99,7 +99,7 @@ export default function Page() {
         </Detail>
 
         <Detail className="flex-1/2">
-          <Detail.title>Feel so good</Detail.title>
+          <Detail.title>Learn</Detail.title>
           <Detail.desc>
             <Text.subDesc>
               기존 컴포넌트 구조의 개선과 더불어
@@ -126,15 +126,11 @@ export default function Page() {
       <Detail>
         <Detail.title>keyPoint2</Detail.title>
         <Detail.desc>
-          <Text.subTitle>
-            모노레포 기반 아키텍처 및 Module Federation 도입
-          </Text.subTitle>
+          <Text.subTitle>모노레포 기반 아키텍처</Text.subTitle>
 
           <Text.subDesc>
             프로젝트의 효율적인 관리와 팀 협업 증진을 위해Turborepo와 pnpm을
-            활용한 <ColorDot>모노레포 아키텍처</ColorDot>를 도입하고, 독립적인
-            배포 및 서비스 통합을 위해 <ColorDot>Module Federation</ColorDot>을
-            적용했습니다.
+            활용한 <ColorDot>모노레포 아키텍처</ColorDot>를 도입하였습니다.
           </Text.subDesc>
           <Text.subDesc>
             <ColorDot>모노레포</ColorDot>를 통해 장애 관리 시스템과 관리자
@@ -143,9 +139,9 @@ export default function Page() {
             되었으며,
           </Text.subDesc>
           <Text.subDesc>
-            <ColorDot>Module Federation</ColorDot>을 통해 서로 다른 Next.js 앱
-            간에 UI/UX 일관성을 유지하면서도 독립적인 배포 및 확장이 가능한
-            마이크로 프론트엔드 구조를 구축했습니다.
+            <ColorDot>Module Federation</ColorDot>을 활용한 마이크로 프론트엔드
+            구조 도입을 지원하여, 서로 다른 Next.js 앱 간에 UI/UX 일관성을
+            유지하면서도 독립적인 배포 및 확장이 가능한 시스템을 구축했습니다.
           </Text.subDesc>
         </Detail.desc>
       </Detail>
@@ -159,14 +155,15 @@ export default function Page() {
               생산성과 협업 효율성을 높일 수 있었습니다.
             </Text.subDesc>
             <Text.subDesc>
-              <ColorDot>Module Federation</ColorDot>: 여러 개의 프론트엔드
-              애플리케이션을 하나의 통합된 사용자 경험으로 제공할 수 있으며,
-              서비스 확장성과 유지보수성을 향상시킬 수 있음을 확인했습니다.
-            </Text.subDesc>
-            <Text.subDesc>
               <ColorDot>기존 방식과의 비교</ColorDot>: 기존 UI 라이브러리 배포
               방식의 번거로움을 해결하고, 공용 컴포넌트 및 디자인 토큰 수정 시
               즉각적인 반영이 가능해져 개발 효율성이 크게 향상되었습니다.
+            </Text.subDesc>
+            <Text.subDesc>
+              <ColorDot>Module Federation</ColorDot>: 팀원과의 협업을 통해
+              마이크로 프론트엔드 아키텍처의 구현 과정을 학습하고, 코드 분석 및
+              리뷰 참여를 통해 여러 프론트엔드 애플리케이션 간의 모듈 공유
+              방식과 독립적 배포의 장점을 실무적으로 이해했습니다.
             </Text.subDesc>
           </Detail.desc>
         </Detail>
