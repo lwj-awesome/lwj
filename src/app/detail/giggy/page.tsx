@@ -11,8 +11,8 @@ function MainPage() {
         <Detail className="flex-1/2">
           <Detail.desc>
             <Text.subDesc>
-              프로필 페이지입니다. 사용자의 개인 정보 또는 회사의 일자리 정보를
-              담은 네임카드를 직접 설정하고 관리할 수 있는 페이지입니다.
+              사용자의 개인 정보 또는 회사의 일자리 정보를 담은 네임카드를 직접
+              설정하고 관리할 수 있는 페이지입니다.
             </Text.subDesc>
             <Text.subDesc>
               달력 기능을 통해 면접 일정이나 중요한 구직/구인 관련 일정을 관리할
