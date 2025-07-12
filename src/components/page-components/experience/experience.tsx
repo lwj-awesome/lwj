@@ -22,7 +22,7 @@ export default function Experience({
               scrollY={visibleSections?.[0]["experience"]?.scrollPosition}
             >
               <Box colorType="box" className="flex flex-row justify-between  ">
-                <Text.subTitle>2025/05/1 - now</Text.subTitle>
+                <Text.subTitle>25 / 05 - now</Text.subTitle>
                 <div className="flex flex-col items-end gap-c-gap-md">
                   <Text.subTitle>NCIDS</Text.subTitle>
                   <Text.description>Front-end Developer</Text.description>
@@ -42,11 +42,11 @@ export default function Experience({
                   <Text.description>삼성 소프트웨어 아카데미</Text.description>
                 </div>
               </Box>
-              <Box colorType="box" className="flex flex-row justify-between  ">
+              <Box colorType="box" className="flex flex-row justify-between">
                 <Text.subTitle>14 / 3 - 21 - 2</Text.subTitle>
-                <div className="flex flex-col justify-end gap-c-gap-md">
+                <div className="flex flex-col items-end gap-c-gap-md">
                   <Text.subTitle>강릉원주대학교</Text.subTitle>
-                  <Text.description>전기공학부 졸업</Text.description>
+                  <Text.description>전기공학부</Text.description>
                 </div>
               </Box>
             </ComopnentScrollGroup>

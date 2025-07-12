@@ -3,7 +3,7 @@ import Project from "@/components/ui/project-box/project-box";
 
 export function Giggy() {
   return (
-    <Project href="/detail/nsd">
+    <Project href="/detail/giggy">
       <Project.img src="/images/giggy/giggy-main.png" />
       <Project.content>
         <Text.subTitle>giggy</Text.subTitle>

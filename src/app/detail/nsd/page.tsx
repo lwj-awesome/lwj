@@ -98,26 +98,6 @@ export default function Page() {
           </Detail.desc>
         </Detail>
       </div>
-      <Detail>
-        <Detail.title>Feel so good</Detail.title>
-        <Detail.desc>
-          <Text.subDesc>
-            공통 UI 컴포넌트 구축 경험을 통해 UI 개발에서 재사용 가능한 컴포넌트
-            설계가 개발 생산성과 유지보수성에 미치는 긍정적인 영향을 깊이
-            체감했습니다.
-          </Text.subDesc>
-          <Text.subDesc>
-            컴포넌트를 명확한 책임과 일관된 인터페이스를 가진 단위로
-            추상화함으로써 코드의 중복을 줄이고, 신규 기능 개발 시 컴포넌트
-            조합만으로 빠르게 UI를 구성할 수 있었습니다
-          </Text.subDesc>
-          <Text.subDesc>
-            이 경험을 바탕으로 앞으로 UI 개발 시 컴포넌트 기반의 아키텍처를
-            적극적으로 활용하고, 디자인 시스템과의 연계를 강화하여 더욱
-            효율적이고 확장 가능한 개발 환경을 구축해 나가야겠다고 생각했습니다.
-          </Text.subDesc>
-        </Detail.desc>
-      </Detail>
     </>
   );
 }

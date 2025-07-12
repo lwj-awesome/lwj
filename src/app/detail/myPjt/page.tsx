@@ -17,7 +17,7 @@ function Token() {
               정의
             </Text.subDesc>
             <Text.subDesc>
-              <ColorDot>*</ColorDot> 공색상, 타이포그래피, 간격 등 핵심 디자인
+              <ColorDot>*</ColorDot> 색상, 타이포그래피, 간격 등 핵심 디자인
               요소 토큰화
             </Text.subDesc>
             <Text.subDesc>
@@ -25,18 +25,17 @@ function Token() {
             </Text.subDesc>
             <Text.subDesc>
               <ColorDot>*</ColorDot> 디자인 변경 시 토큰 수정을 통한 일괄 적용
-              테스트
             </Text.subDesc>
           </Detail.desc>
           <Detail.title>keyPoint</Detail.title>
           <Detail.desc>
             <Text.subDesc>
               <ColorDot>일관성 있는 UI/UX</ColorDot>: 모든 컴포넌트가 동일한
-              디자인 규칙을 따라 통일감 있는 사용자 경험 제공
+              디자인 규칙을 따라 통일성 있는 사용자 경험 제공
             </Text.subDesc>
             <Text.subDesc>
-              <ColorDot>효율적인 유지보수</ColorDot>:디자인 변경 시 토큰 값만
-              수정하면 전체 프로젝트에 일괄 반영
+              <ColorDot>효율적인 유지보수</ColorDot>: 디자인 변경 시 토큰 값만
+              수정하면 전체 프로젝트에 일괄 적용
             </Text.subDesc>
             <Text.subDesc>
               <ColorDot>확장 가능한 디자인 시스템</ColorDot>: 새로운 컴포넌트
@@ -267,10 +266,9 @@ export default function Page() {
             가치를 발휘하는지 직접 경험했습니다.
           </Text.subDesc>
           <Text.subDesc>
-            아직 부족한 점이 많고 배워야 할 것들이 산더미 같지만, 프로젝트를
-            하나씩 완성해 갈 때마다 확실히 성장하고 있다는 것을 느낍니다.
-            기술적인 깊이뿐만 아니라 문제 해결 능력, 프로젝트 관리 역량까지
-            조금씩 향상되고 있음을 실감합니다.
+            아직 부족한 점이 많지만, 프로젝트를 하나씩 완성해 갈 때마다 확실히
+            성장하고 있다는 것을 느낍니다. 기술적인 깊이뿐만 아니라 문제 해결
+            능력, 프로젝트 관리 역량까지 조금씩 향상되고 있습니다.
           </Text.subDesc>
           <Text.subDesc>
             앞으로도 새로운 기술과 방법론에 대한 호기심을 잃지 않고, 각
@@ -281,9 +279,9 @@ export default function Page() {
       </Detail>
       <Token />
       <ScrollEvent />
-      <BlurMarquee exceptSkill={exceptSkill} />
       <Repo />
       <Compound />
+      <BlurMarquee exceptSkill={exceptSkill} />
     </>
   );
 }

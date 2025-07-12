@@ -1,289 +1,228 @@
 import { BlurMarquee } from "@/components/ui/marquee/marquee";
 import Text from "@/components/atom/text-module/text-module";
 import { Detail } from "@/components/ui/detail-item/detail-item";
-import { ColorDot } from "@/components/atom/color-dot";
 import { LogoType } from "@/types/types";
 
-function Token() {
+function MainPage() {
   return (
     <Detail>
-      <Detail.title>1. 디자인 토큰을 활용한 일관성 있는 스타일링</Detail.title>
+      <Detail.title>메인 페이지</Detail.title>
       <div className="lg:flex lg:gap-c-gap-xxl">
         <Detail className="flex-1/2">
-          <Detail.title>Check</Detail.title>
           <Detail.desc>
             <Text.subDesc>
-              <ColorDot>*</ColorDot> 프로젝트 초기 디자인 시스템 설계 및 토큰
-              정의
+              프로필 페이지입니다. 사용자의 개인 정보 또는 회사의 일자리 정보를
+              담은 네임카드를 직접 설정하고 관리할 수 있는 페이지입니다.
             </Text.subDesc>
             <Text.subDesc>
-              <ColorDot>*</ColorDot> 공색상, 타이포그래피, 간격 등 핵심 디자인
-              요소 토큰화
-            </Text.subDesc>
-            <Text.subDesc>
-              <ColorDot>*</ColorDot>컴포넌트별 디자인 토큰 적용
-            </Text.subDesc>
-            <Text.subDesc>
-              <ColorDot>*</ColorDot> 디자인 변경 시 토큰 수정을 통한 일괄 적용
-              테스트
-            </Text.subDesc>
-          </Detail.desc>
-          <Detail.title>keyPoint</Detail.title>
-          <Detail.desc>
-            <Text.subDesc>
-              <ColorDot>일관성 있는 UI/UX</ColorDot>: 모든 컴포넌트가 동일한
-              디자인 규칙을 따라 통일감 있는 사용자 경험 제공
-            </Text.subDesc>
-            <Text.subDesc>
-              <ColorDot>효율적인 유지보수</ColorDot>:디자인 변경 시 토큰 값만
-              수정하면 전체 프로젝트에 일괄 반영
-            </Text.subDesc>
-            <Text.subDesc>
-              <ColorDot>확장 가능한 디자인 시스템</ColorDot>: 새로운 컴포넌트
-              추가 시에도 기존 토큰을 활용하여 빠른 개발 가능
-            </Text.subDesc>
-          </Detail.desc>
-          <Detail.title>Learn</Detail.title>
-          <Detail.desc>
-            <Text.subDesc>
-              <ColorDot>디자인 토큰</ColorDot>의 중요성과 실제 프로젝트에서의
-              효과를 직접 체험했습니다. 특히 프로젝트 후반부에 디자인 수정이
-              필요할 때, 토큰 기반 접근법이 얼마나 효율적인지 실감했습니다.
-            </Text.subDesc>
-            <Text.subDesc>
-              <ColorDot>디자인 시스템 구축의 필요성</ColorDot>: 디자이너와의
-              긴밀한 협업을 통해 컬러 팔레트, 타이포그래피, 인터랙션 규칙 등
-              디자인 시스템의 기반을 마련하고 이를 코드에 반영함으로써 일관된
-              UI를 구현하고 팀 내 디자인 가이드라인을 확립할 수 있었습니다.
-            </Text.subDesc>
-            <Text.subDesc>
-              <ColorDot>디자인 시스템</ColorDot>은 단순히 스타일링을 위한 도구가
-              아니라, 프로젝트의 생산성과 일관성을 높이는 핵심 인프라임을
-              이해했습니다
+              달력 기능을 통해 면접 일정이나 중요한 구직/구인 관련 일정을 관리할
+              수 있으며, 알림 시스템을 통해 새로운 매칭 알림이나 지원 현황을
+              실시간으로 확인할 수 있습니다. 또한 현재 진행 중인 매칭 프로세스의
+              단계별 진행 상황을 시각적으로 보여주는 프로그레스 바를 제공하여,
+              사용자가 자신의 구인구직 활동 전반을 한눈에 파악하고 효율적으로
+              관리할 수 있도록 구성했습니다. 이를 통해 개인 맞춤형 구인구직 허브
+              역할을 수행하는 페이지입니다.
             </Text.subDesc>
           </Detail.desc>
         </Detail>
         <Detail className="flex-1/2">
-          <Detail.img width={500} clasName="w-full" src="/images/token.png" />
-        </Detail>
-      </div>
-    </Detail>
-  );
-}
-
-function ScrollEvent() {
-  return (
-    <Detail>
-      <Detail.title>
-        2. 수학적 계산 기반 스크롤 애니메이션 순수 구현
-      </Detail.title>
-      <div className="lg:flex lg:gap-c-gap-xxl">
-        <Detail className="flex-1/2">
-          <Detail.title>Check</Detail.title>
-          <Detail.desc>
-            <Text.subDesc>
-              <ColorDot>*</ColorDot> 애니메이션 구간을 정확히 분할하는 ratio
-              기반 시스템 구축
-            </Text.subDesc>
-            <Text.subDesc>
-              <ColorDot>*</ColorDot>fadeIn/fadeOut 구간을 자동으로 계산하는
-              알고리즘 개발
-            </Text.subDesc>
-            <Text.subDesc>
-              <ColorDot>*</ColorDot>opacity와 transform 값을 동시에 제어하는
-              복합 애니메이션 구현
-            </Text.subDesc>
-            <Text.subDesc>
-              <ColorDot>*</ColorDot>성능 최적화를 위한 조건부 렌더링 로직 적용
-            </Text.subDesc>
-          </Detail.desc>
-          <Detail.title>keyPoint</Detail.title>
-          <Detail.desc>
-            <Text.subDesc>
-              <ColorDot>부드러운 사용자 경험</ColorDot>: opacity와 translateY를
-              조합한 자연스러운 fade 애니메이션
-            </Text.subDesc>
-            <Text.subDesc>
-              <ColorDot>정밀한 애니메이션 제어</ColorDot>: ratio 기반 계산으로
-              스크롤 위치에 따른 정확한 애니메이션 타이밍 구현
-            </Text.subDesc>
-            <Text.subDesc>
-              <ColorDot>수학적 접근법</ColorDot>: 스크롤 기반 애니메이션으로
-              인터랙티브한 웹 경험 제공
-            </Text.subDesc>
-            <Text.subDesc>
-              <ColorDot>재사용 가능한 컴포넌트</ColorDot>: : props로 애니메이션
-              구간을 자유롭게 설정할 수 있는 유연한 설계
-            </Text.subDesc>
-          </Detail.desc>
-          <Detail.title>Learn</Detail.title>
-          <Detail.desc>
-            <Text.subDesc>
-              <ColorDot>라이브러리에 의존하지 않고</ColorDot>라이브러리 없이
-              순수 JavaScript와 수학적 계산만으로도 고품질의 스크롤 애니메이션을
-              구현할 수 있다는 것을 깨달았습니다. calculateScroll 유틸 함수를
-              통해 복잡한 애니메이션 값 계산을 체계적으로 관리할 수 있었습니다.
-            </Text.subDesc>
-          </Detail.desc>
-        </Detail>
-        <Detail className="flex-1/2">
-          <Detail.img width={500} clasName="w-full" src="/images/scroll.png" />
           <Detail.img
-            width={500}
+            width={800}
             clasName="w-full"
-            src="/images/caculate.png"
+            src="/images/giggy/giggy-home.png"
           />
         </Detail>
       </div>
     </Detail>
   );
 }
-function Repo() {
+
+function ProfilePage() {
   return (
     <Detail>
-      <Detail.title>3. 체계적인 프로젝트 관리 및 폴더 구조 설계</Detail.title>
+      <Detail.title>프로필 페이지</Detail.title>
       <div className="lg:flex lg:gap-c-gap-xxl">
-        <Detail className="flex-1/2">
-          <Detail.title>Check</Detail.title>
-          <Detail.desc>
-            <Text.subDesc>
-              <ColorDot>*</ColorDot> 기능별/도메인별 폴더 구조 설계 및 적용
-            </Text.subDesc>
-            <Text.subDesc>
-              <ColorDot>*</ColorDot>컴포넌트, 훅, 유틸리티, 타입 등 역할별 파일
-              분류
-            </Text.subDesc>
-            <Text.subDesc>
-              <ColorDot>*</ColorDot>Next.js App Router 구조에 맞는 페이지 및
-              레이아웃 구성
-            </Text.subDesc>
-          </Detail.desc>
-          <Detail.title>keyPoint</Detail.title>
-          <Detail.desc>
-            <Text.subDesc>
-              <ColorDot>명확한 관심사 분리</ColorDot>: o기능별/계층별로 명확하게
-              구분된 폴더 구조로 코드 가독성 향상
-            </Text.subDesc>
-            <Text.subDesc>
-              <ColorDot>확장성 고려</ColorDot>: 새로운 기능 추가 시에도 기존
-              구조를 해치지 않는 유연한 설계
-            </Text.subDesc>
-            <Text.subDesc>
-              <ColorDot>개발 효율성</ColorDot>: 일관된 폴더 구조로 파일 탐색
-              시간 단축 및 개발 생산성 향상
-            </Text.subDesc>
-          </Detail.desc>
-          <Detail.title>Learn</Detail.title>
-          <Detail.desc>
-            <Text.subDesc>
-              프로젝트 초기에 폴더 구조를 충분히 고민하고 설계하는 것이
-              장기적으로 얼마나 중요한지 깨달았습니다. 중간에 구조를 변경하는
-              것은 매우 큰 비용이 든다는 것을 배웠습니다.
-            </Text.subDesc>
-          </Detail.desc>
-        </Detail>
-        <Detail className="flex-1/2">
-          <Detail.img width={500} clasName="w-full" src="/images/tree.png" />
-        </Detail>
-      </div>
-    </Detail>
-  );
-}
-function Compound() {
-  return (
-    <Detail>
-      <Detail.title>
-        4. Compound Pattern을 활용한 모듈화된 컴포넌트 설계
-      </Detail.title>
-      <div className="lg:flex lg:gap-c-gap-xxl">
-        <Detail className="flex-1/2">
-          <Detail.title>Check</Detail.title>
-          <Detail.desc>
-            <Text.subDesc>
-              <ColorDot>*</ColorDot> 메인 컴포넌트(Detail)와 서브 컴포넌트들
-              간의 관계 정의
-            </Text.subDesc>
-            <Text.subDesc>
-              <ColorDot>*</ColorDot>각 서브 컴포넌트의 독립적 기능과 일관된
-              스타일링 구현
-            </Text.subDesc>
-            <Text.subDesc>
-              <ColorDot>*</ColorDot> 다양한 레이아웃 조합을 위한 유연한 구조
-              구축
-            </Text.subDesc>
-          </Detail.desc>
-          <Detail.title>keyPoint</Detail.title>
-          <Detail.desc>
-            <Text.subDesc>
-              <ColorDot>직관적인 사용법</ColorDot>: Detail.title, Detail.desc,
-              Detail.img와 같은 dot notation으로 명확한 컴포넌트 구조 제공
-            </Text.subDesc>
-            <Text.subDesc>
-              <ColorDot>높은 재사용성</ColorDot>: 각 서브 컴포넌트를 독립적으로
-              사용하거나 자유롭게 조합하여 다양한 레이아웃 구성 가능
-            </Text.subDesc>
-            <Text.subDesc>
-              <ColorDot>일관된 디자인</ColorDot>:공통 스타일링(gap, margin 등)을
-              메인 컴포넌트에서 관리하여 UI 통일성 확보
-            </Text.subDesc>
-            <Text.subDesc>
-              <ColorDot>확장 가능한 구조</ColorDot>: 새로운 서브 컴포넌트 추가
-              시 기존 패턴을 따라 쉽게 확장 가능
-            </Text.subDesc>
-          </Detail.desc>
-          <Detail.title>Learn</Detail.title>
-          <Detail.desc>
-            <Text.subDesc>
-              <ColorDot>Compound Pattern</ColorDot>이 단순히 컴포넌트를 분리하는
-              것이 아니라, 사용자에게 더 직관적이고 유연한 API를 제공하는 설계
-              패턴임을 깨달았습니다. Detail.title, Detail.desc 같은 네이밍으로
-              컴포넌트의 역할이 명확해졌습니다.
-            </Text.subDesc>
-          </Detail.desc>
-        </Detail>
-        <Detail className="flex-1/2">
+        <Detail>
           <Detail.img
             width={600}
             clasName="w-full"
-            src="/images/component.png"
+            src="/images/giggy/giggy-setting.png"
           />
+        </Detail>
+        <Detail>
+          <Detail.desc>
+            <Text.subDesc>
+              메인 페이지입니다. 호주 현지 구인구직 뉴스와 구직자 혹은
+              구인자에게 추천하는 인재 및 일자리 정보를 한눈에 볼 수 있도록
+              간단한 네임 카드 형태로 구성했습니다.
+            </Text.subDesc>
+            <Text.subDesc>
+              UI는 모바일 환경을 우선적으로 고려한 웹뷰 디자인으로 개발하여
+              반응형 웹 서비스를 제공하며, 데스크톱 환경에서는 화면 양쪽
+              사이드에 광고 배너 영역을 배치하여 향후 광고 수익 모델을 구축할 수
+              있도록 설계했습니다.
+            </Text.subDesc>
+            <Text.subDesc>
+              이를 통해 사용자는 어떤 디바이스에서든 일관된 사용자 경험을 받을
+              수 있으며, 동시에 지속 가능한 서비스 운영을 위한 수익 구조도 함께
+              고려한 설계입니다.
+            </Text.subDesc>
+          </Detail.desc>
         </Detail>
       </div>
     </Detail>
   );
 }
 
+function MatchingPage() {
+  return (
+    <Detail>
+      <Detail.title>매칭 프로그레스</Detail.title>
+      <div className="lg:flex lg:gap-c-gap-xxl">
+        <Detail className="flex-1/2 ">
+          <Detail.desc>
+            <Text.subDesc>
+              매칭 프로그레스 페이지입니다. 구인자의 경우 연결된 구직자와의 매칭
+              정보를 상세히 확인할 수 있으며, 구직자의 경우 연결된 업체와의 매칭
+              현황을 실시간으로 모니터링할 수 있는 화면입니다.
+            </Text.subDesc>
+            <Text.subDesc>
+              각 매칭의 진행 단계별 상태를 시각적으로 표시하여 현재 어느 단계에
+              있는지 명확하게 파악할 수 있으며, 상호 간의 관심도, 면접 일정,
+              최종 결과 등의 정보를 실시간으로 업데이트하여 제공합니다.
+            </Text.subDesc>
+            <Text.subDesc>
+              이를 통해 사용자는 여러 매칭을 동시에 진행하면서도 각각의 진행
+              상황을 체계적으로 관리하고, 다음 단계로의 진행을 위한 필요한
+              액션을 놓치지 않도록 지원하는 페이지입니다.
+            </Text.subDesc>
+          </Detail.desc>
+        </Detail>
+        <Detail className="flex-1/2">
+          <Detail.img
+            width={300}
+            clasName="w-full"
+            src="/images/giggy/giggy-matching.png"
+          />
+        </Detail>
+      </div>
+    </Detail>
+  );
+}
+function CreateArticle() {
+  return (
+    <Detail>
+      <Detail.title>구인 등록 페이지</Detail.title>
+      <div className="lg:flex lg:gap-c-gap-xxl">
+        <Detail>
+          <Detail.img
+            width={600}
+            clasName="w-full"
+            src="/images/giggy/giggy-regist.png"
+          />
+        </Detail>
+        <Detail>
+          <Detail.desc>
+            <Text.subDesc>
+              구인자가 작성할 수 있는 페이지입니다. 이 페이지를 통해 구인
+              게시글을 등록할 수 있으며, casual job과 정규직 등 고용 형태를
+              명확히 구분하여 선택할 수 있도록 구성했습니다.
+            </Text.subDesc>
+            <Text.subDesc>
+              구직자들이 일자리의 성격을 한눈에 파악할 수 있도록 고용 유형별로
+              카테고리를 분류하여, 단기간 유연한 근무를 원하는 경우에는 casual
+              job을, 안정적인 장기 근무를 원하는 경우에는 정규직 포지션을 쉽게
+              찾을 수 있게 했습니다.
+            </Text.subDesc>
+            <Text.subDesc>
+              이를 통해 구인자는 원하는 고용 형태에 맞는 적합한 인재를
+              효과적으로 모집할 수 있으며, 구직자 또한 자신의 근무 조건과 맞는
+              일자리를 보다 정확하게 찾을 수 있도록 지원하는 페이지입니다.
+            </Text.subDesc>
+          </Detail.desc>
+        </Detail>
+      </div>
+    </Detail>
+  );
+}
+function Learn() {
+  return (
+    <Detail>
+      <Detail.title>Learn</Detail.title>
+      <div className="lg:flex flex-col lg:gap-c-gap-xxl">
+        <Detail.desc>
+          <Text.subTitle>프로젝트 전체를 경험하다</Text.subTitle>
+          <Text.subDesc>
+            아무것도 없는 상태에서 시작한 프로젝트를 통해 정말 많은 걸
+            배웠습니다. 호주에 살고 있는 친구들이 이런 서비스가 호주에 없는데,
+            있으면 좋겠다는 간단한 생각으로 시작해, 정해진 틀이 없는 상황에서
+            처음부터 하나씩 만들어가며 서비스를 개발하는 전체 과정을 경험할 수
+            있었습니다.
+          </Text.subDesc>
+        </Detail.desc>
+        <Detail.desc>
+          <Text.subTitle>팀원들과의 소통 강화</Text.subTitle>
+          <Text.subDesc>
+            호주에서 함께 기획한 팀원들이 타일공, 간호사같이 기획 전문가가 아닌
+            각자 다른 일을 하는 사람들이었습니다. 전문가가 아닌 이들과 소통하고
+            협업하는 것이 쉽지 않았지만, 기술적인 설명과 전체적으로 모든 것들이
+            논리적으로 이어져야하는 이유 등을 설명하며 잘 헤쳐나갔던것 같습니다.
+            이런 경험이 실무에서 여러 타입의 기획자들과 일할 때도 큰 도움이 될
+            것 같습니다. 또한, 기획 과정에 직접 깊게 참여해보니, 기획이 정말
+            어렵고 복잡한 일이라는 걸 알게 됐습니다. 이를통해 기획자의 입장을 좀
+            더 이해할 수 있게 되었습니다.
+          </Text.subDesc>
+        </Detail.desc>
+        <Detail.desc>
+          <Text.subTitle> 문제 해결, 의사 결정 능력</Text.subTitle>
+          <Text.subDesc>
+            기능 추가와 정책 개발 업무를 하면서 진짜 문제가 뭘까?, 어떻게
+            해결할까? 를 끊임없이 고민했습니다. 크고 작은 의사결정을 내려야 하는
+            순간들이 많았는데, 이런 경험들이 쌓여 문제 해결과 의사결정 역량을
+            기르는 데 도움이 되었습니다.
+          </Text.subDesc>
+        </Detail.desc>
+        <Detail.desc>
+          <Text.subDesc>
+            아직 출시하지는 못했지만, 출시한 후에 실제 사용자들의 반응을 보고
+            피드백을 받으면서 다시 문제를 찾고 개선해나가는 과정을 겪게 되면,
+            단순히 코딩만 하는 개발자가 아닌 진짜 개발자다운 종합적인 능력을 더
+            키울 수 있을 거라고 생각합니다.
+          </Text.subDesc>
+        </Detail.desc>
+      </div>
+    </Detail>
+  );
+}
 export default function Page() {
   const exceptSkill: LogoType[] = ["MFA", "React-query", "Recoil"];
   return (
     <>
       <Detail>
-        <Detail.title>포트폴리오 프로젝트</Detail.title>
+        <Detail.title>호주 현지 구인 / 구직 서비스 GIGGY</Detail.title>
         <Detail.desc>
           <Text.subDesc>
-            이번 프로젝트를 통해 Next.js App Router와 현대적인 웹 개발 패턴들을
-            실제로 적용해보며 많은 것을 배울 수 있었습니다. 디자인 토큰부터
-            컴포넌트 설계까지, 각각의 기술과 방법론이 어떻게 실제 프로젝트에서
-            가치를 발휘하는지 직접 경험했습니다.
+            호주 내 구인 및 구직 연결을 효율적으로 지원하기 위해 Next.js App
+            Router 기반으로 개발된 프로젝트입니다. 디자인 토큰과 shadcn/ui를
+            활용한 공통 컴포넌트로 서비스 전반의 일관성을 확보하고, 호주
+            현지인과의 회의를 통해 수집한 요구사항을 반영하여 직관적인 사용자
+            경험을 제공했습니다.
           </Text.subDesc>
           <Text.subDesc>
-            아직 부족한 점이 많고 배워야 할 것들이 산더미 같지만, 프로젝트를
-            하나씩 완성해 갈 때마다 확실히 성장하고 있다는 것을 느낍니다.
-            기술적인 깊이뿐만 아니라 문제 해결 능력, 프로젝트 관리 역량까지
-            조금씩 향상되고 있음을 실감합니다.
-          </Text.subDesc>
-          <Text.subDesc>
-            앞으로도 새로운 기술과 방법론에 대한 호기심을 잃지 않고, 각
-            프로젝트에서 배운 것들을 다음 프로젝트에 더 발전된 형태로 적용해
-            나가며 지속적으로 성장하는 개발자가 되겠습니다.
+            현재 매주 정기적인 기획회의와 개발회의를 통해 프로젝트를 체계적으로
+            진행하고 있으며, 팀원들과의 지속적인 커뮤니케이션을 바탕으로 개발
+            일정을 관리하고 있습니다. 올해 말까지 실제 서비스 배포를 완료하여
+            호주 현지 고객들에게 직접 서비스를 제공하고 사용자 피드백을 수집하는
+            것을 목표로 하고 있습니다.
           </Text.subDesc>
         </Detail.desc>
       </Detail>
-      <Token />
-      <ScrollEvent />
+      <MainPage />
+      <ProfilePage />
+      <MatchingPage />
+      <CreateArticle />
+      <Learn />
       <BlurMarquee exceptSkill={exceptSkill} />
-      <Repo />
-      <Compound />
     </>
   );
 }

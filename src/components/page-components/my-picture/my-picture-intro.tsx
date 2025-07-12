@@ -22,7 +22,7 @@ export default function MyPicture({
             scrollY={visibleSections?.[0]["myPicture"]?.scrollPosition}
           >
             <Text.title className="">
-              사용자에게 <ColorDot>*</ColorDot> 가치를 더하고 싶은
+              사용자에게 <ColorDot>가치</ColorDot>를 더하고 싶은
             </Text.title>
           </ComopnentScrollGroup>
 
@@ -33,7 +33,7 @@ export default function MyPicture({
             scrollY={visibleSections?.[0]["myPicture"]?.scrollPosition}
           >
             <Text.title>
-              <ColorDot>*</ColorDot>개발자 이원종입니다
+              개발자<ColorDot>이원종</ColorDot>입니다
               <ColorDot>.</ColorDot>
             </Text.title>
           </ComopnentScrollGroup>
@@ -51,7 +51,7 @@ export default function MyPicture({
               </Text.description>
               <Text.description>
                 이러한 개발자가 되기 위해 프론트엔드 기술 학습에 끊임없이
-                노력하고 있어요.
+                노력하고 있습니다.
               </Text.description>
             </div>
           </ComopnentScrollGroup>

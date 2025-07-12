@@ -7,7 +7,6 @@ import Experience from "@/components/page-components/experience/experience";
 import { Intro } from "@/components/page-components/intro/intro";
 import MyPicture from "@/components/page-components/my-picture/my-picture-intro";
 import Project from "@/components/page-components/project/project";
-import Footer from "@/components/ui/footer/footer";
 
 export default function Home() {
   const introRef = useRef<HTMLDivElement | null>(null);
@@ -28,6 +27,7 @@ export default function Home() {
   const scrollToSection = (ref: React.RefObject<HTMLDivElement | null>) => {
     return () => ref.current?.scrollIntoView({ behavior: "smooth" });
   };
+
   return (
     <div className="w-[100%]">
       <Header
@@ -66,7 +66,7 @@ export default function Home() {
         </article>
       </section>
       <section
-        className="h-[500vh] p-c-gap-md w-full sm:p-c-gap-xxl"
+        className="h-[500vh] p-c-gap-md w-full sm:p-c-gap-xxl mb-32"
         ref={projectRef}
       >
         <article className="sticky top-[8rem]">
@@ -75,7 +75,6 @@ export default function Home() {
           )}
         </article>
       </section>
-      <Footer />
     </div>
   );
 }

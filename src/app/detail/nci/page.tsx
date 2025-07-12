@@ -97,30 +97,6 @@ export default function Page() {
             </Text.subDesc>
           </Detail.desc>
         </Detail>
-
-        <Detail className="flex-1/2">
-          <Detail.title>Learn</Detail.title>
-          <Detail.desc>
-            <Text.subDesc>
-              기존 컴포넌트 구조의 개선과 더불어
-              <ColorDot>디자인 토큰</ColorDot> 도입을 통해 코드의 가독성,
-              유지보수성, 디자인 일관성이 더욱 크게 향상되었음을 체감했습니다.
-            </Text.subDesc>
-            <Text.subDesc>
-              처음에는 패턴 적용과 디자인 토큰 설정에 대한 이해와 설계에
-              어려움이 있었지만, 점진적인 리팩토링 과정을 통해{" "}
-              <ColorDot>SOLID 원칙</ColorDot>,
-              <ColorDot>Compound Pattern</ColorDot>, 그리고{" "}
-              <ColorDot>디자인 토큰</ColorDot>의 장점을 명확히 이해하고 실제
-              개발에 효과적으로 적용할 수 있었습니다.
-            </Text.subDesc>
-            <Text.subDesc>
-              이 경험을 통해 앞으로 UI 개발 시 유지보수성, 확장성, 그리고 디자인
-              시스템의 효율적인 관리를 최우선으로 고려하는 설계 방식을
-              습관화해야겠다고 다짐했습니다.
-            </Text.subDesc>
-          </Detail.desc>
-        </Detail>
       </div>
 
       <Detail>
@@ -160,27 +136,10 @@ export default function Page() {
               즉각적인 반영이 가능해져 개발 효율성이 크게 향상되었습니다.
             </Text.subDesc>
             <Text.subDesc>
-              <ColorDot>Module Federation</ColorDot>: 팀원과의 협업을 통해
-              마이크로 프론트엔드 아키텍처의 구현 과정을 학습하고, 코드 분석 및
-              리뷰 참여를 통해 여러 프론트엔드 애플리케이션 간의 모듈 공유
-              방식과 독립적 배포의 장점을 실무적으로 이해했습니다.
-            </Text.subDesc>
-          </Detail.desc>
-        </Detail>
-
-        <Detail className="flex-1/2">
-          <Detail.title>Feel so good</Detail.title>
-          <Detail.desc>
-            <Text.subDesc>
-              <ColorDot>모노레포와 Module Federation</ColorDot>을 도입하는
-              과정에서 초기 설정 및 각 기술에 대한 이해가 필요했지만, 구축 후
-              얻을 수 있는 개발 효율성, 유지보수성, 확장성의 이점을 명확히
-              확인할 수 있었습니다.
-            </Text.subDesc>
-            <Text.subDesc>
-              앞으로도 <ColorDot>MSA</ColorDot> 환경에서의 효율적인 프론트엔드
-              개발 및 운영 방안에 대해 지속적으로 학습하고 적용해 나가야겠다고
-              생각했습니다.
+              <ColorDot>Module Federation을 경험</ColorDot>: 팀원과의 협업을
+              통해 마이크로 프론트엔드 아키텍처의 구현 과정을 학습하고, 코드
+              분석 및 리뷰 참여를 통해 여러 프론트엔드 애플리케이션 간의 모듈
+              공유 방식과 독립적 배포의 장점을 실무적으로 이해했습니다.
             </Text.subDesc>
           </Detail.desc>
         </Detail>
