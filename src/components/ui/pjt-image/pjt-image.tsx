@@ -3,8 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 type ProjectImageType = Record<"src" | "title" | "width" | "href", string>;
-export function ProjectImage({ href, title, src, width }: ProjectImageType) {
-  const commonStyle = `p-4 gap-1 w-[${width}] h-[350px] bg-c-box-bg-color flex flex-col  items-center   rounded-c-border-radius`;
+export function ProjectImage({ href, title, src }: ProjectImageType) {
+  const commonStyle = `p-4 gap-1   w-full  h-[350px] bg-c-box-bg-color flex flex-col  items-center   rounded-c-border-radius`;
   return (
     <Link className={commonStyle} href={href}>
       <div className="h-[95%] w-full">

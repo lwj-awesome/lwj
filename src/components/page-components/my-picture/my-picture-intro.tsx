@@ -3,6 +3,7 @@ import { VisibleSectionsProps } from "@/types/types";
 import Text from "../../atom/text-module/text-module";
 import { Box } from "@/components/atom/box/box-layout";
 import { ColorDot } from "@/components/atom/color-dot";
+import Image from "next/image";
 
 export default function MyPicture({
   visibleSections,
@@ -21,7 +22,7 @@ export default function MyPicture({
             scrollHeight={visibleSections?.[0]["myPicture"]?.sectionHeight}
             scrollY={visibleSections?.[0]["myPicture"]?.scrollPosition}
           >
-            <Text.title className="">
+            <Text.title>
               사용자에게 <ColorDot>가치</ColorDot>를 더하고 싶은
             </Text.title>
           </ComopnentScrollGroup>
@@ -62,8 +63,19 @@ export default function MyPicture({
           scrollHeight={visibleSections?.[0]["myPicture"]?.sectionHeight}
           scrollY={visibleSections?.[0]["myPicture"]?.scrollPosition}
         >
-          <Box colorType="img" className=" w-[20rem] h-[20rem]">
-            img
+          <Box colorType="img" className=" w-[20rem] h-[25rem]">
+            <Image
+              alt=""
+              src="/images/me.JPG"
+              width={300}
+              height={300}
+              style={{
+                objectFit: "cover",
+                width: "100%",
+                height: "100%",
+                borderRadius: "var(--radius-c-border-radius)",
+              }}
+            />
           </Box>
         </ComopnentScrollGroup>
       </div>

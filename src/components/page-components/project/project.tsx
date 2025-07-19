@@ -22,14 +22,14 @@ export default function Project({
         >
           <Text.title>PROJECT</Text.title>
         </ComopnentScrollGroup>
-        <div className=" p-c-gap-lg w-full h-[700px]  rounded-c-border-radius flex flex-col gap-c-gap-lg">
+        <div className=" p-c-gap-lg w-full lg:h-[700px]  rounded-c-border-radius flex flex-col gap-c-gap-lg">
           <ComopnentScrollGroup
             startRatio={0.3}
             endRatio={0.7}
             scrollHeight={visibleSections?.[0]["project"]?.sectionHeight}
             scrollY={visibleSections?.[0]["project"]?.scrollPosition}
           >
-            <div className="w-full flex gap-c-gap-md">
+            <div className="w-full lg:flex lg:flex-row flex flex-col gap-c-gap-md">
               <ProjectImage
                 href="/detail/myPjt"
                 title="포트폴리오"
@@ -50,7 +50,7 @@ export default function Project({
             scrollHeight={visibleSections?.[0]["project"]?.sectionHeight}
             scrollY={visibleSections?.[0]["project"]?.scrollPosition}
           >
-            <div className="w-full flex gap-c-gap-md">
+            <div className="w-full lg:flex lg:flex-row flex flex-col gap-c-gap-md">
               <ProjectImage
                 href="/detail/nci"
                 title="장애관리시스템"

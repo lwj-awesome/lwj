@@ -3,16 +3,25 @@
 import { useEffect, useState } from "react";
 
 export function useTheme() {
-  const [theme, setTheme] = useState<"light" | "dark" | null>(null);
+  const [theme, setTheme] = useState<"light" | "dark">("light");
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    const storedTheme =
-      (localStorage?.getItem("theme") as "dark" | "light") || "light";
-    setTheme(storedTheme);
+    setMounted(true);
+    const storedTheme = localStorage?.getItem("theme") as "dark" | "light";
+    if (storedTheme) {
+      setTheme(storedTheme);
+    } else {
+      const prefersDark = window.matchMedia(
+        "(prefers-color-scheme: dark)"
+      ).matches;
+      setTheme(prefersDark ? "dark" : "light");
+    }
   }, []);
 
   useEffect(() => {
-    if (!theme) return;
+    if (!mounted) return;
+
     const root = document.documentElement;
     if (theme === "dark") {
       root.classList.add("dark");
@@ -20,12 +29,15 @@ export function useTheme() {
       root.classList.remove("dark");
     }
     localStorage.setItem("theme", theme);
-  }, [theme]);
+  }, [theme, mounted]);
 
   const toggleTheme = () => {
-    if (!theme) return;
     setTheme((prev) => (prev === "light" ? "dark" : "light"));
   };
 
-  return { theme: theme || "light", toggleTheme };
+  return {
+    theme,
+    toggleTheme,
+    mounted,
+  };
 }
