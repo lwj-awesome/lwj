@@ -23,7 +23,11 @@ export function DescriptionPart({
       <Detail.desc>
         {content.map((item) => (
           <div key={item.key}>
-            {item.subTitle && <Text.subTitle>{item.subTitle}</Text.subTitle>}
+            {item.subTitle && (
+              <div className="mb-5">
+                <Text.subTitle>{item.subTitle}</Text.subTitle>
+              </div>
+            )}
             <Text.subDesc>
               <ColorDot>{item.hilight}</ColorDot> {item.text}
             </Text.subDesc>

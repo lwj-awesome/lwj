@@ -66,7 +66,7 @@ export default function Home() {
         </article>
       </section>
       <section
-        className="h-[500vh] p-c-gap-md w-full sm:p-c-gap-xxl mb-32"
+        className="h-[600vh] p-c-gap-md w-full sm:p-c-gap-xxl mb-32"
         ref={projectRef}
       >
         <article className="sticky top-[8rem]">

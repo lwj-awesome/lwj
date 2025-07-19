@@ -2,10 +2,7 @@ import ComopnentScrollGroup from "@/components/scroll/components-scroll";
 import { VisibleSectionsProps } from "@/types/types";
 import Text from "../../atom/text-module/text-module";
 
-import { ServiceDesk } from "../servicedesk-project/servicedesk-project";
-import { Nci } from "../nci-project/nci-project";
-import { MyPjt } from "../myPjt/my-pjt";
-import { Giggy } from "../giggy/giggy-project";
+import { ProjectImage } from "@/components/ui/pjt-image/pjt-image";
 
 export default function Project({
   visibleSections,
@@ -16,7 +13,7 @@ export default function Project({
     <article
       className={`section ${visibleSections?.[0]?.["project"] && "visible"}`}
     >
-      <div className="flex flex-col items-center gap-c-gap-lg">
+      <div className="w-full flex flex-col items-center gap-c-gap-lg">
         <ComopnentScrollGroup
           startRatio={0.2}
           endRatio={0.8}
@@ -25,39 +22,48 @@ export default function Project({
         >
           <Text.title>PROJECT</Text.title>
         </ComopnentScrollGroup>
-        <div className="flex lg:flex-row flex-col gap-c-gap-md">
+        <div className=" p-c-gap-lg w-full h-[700px]  rounded-c-border-radius flex flex-col gap-c-gap-lg">
           <ComopnentScrollGroup
-            startRatio={0.1}
-            endRatio={0.3}
-            scrollHeight={visibleSections?.[0]["project"]?.sectionHeight}
-            scrollY={visibleSections?.[0]["project"]?.scrollPosition}
-          >
-            <MyPjt />
-          </ComopnentScrollGroup>
-
-          <ComopnentScrollGroup
-            startRatio={0.1}
-            endRatio={0.5}
-            scrollHeight={visibleSections?.[0]["project"]?.sectionHeight}
-            scrollY={visibleSections?.[0]["project"]?.scrollPosition}
-          >
-            <Giggy />
-          </ComopnentScrollGroup>
-          <ComopnentScrollGroup
-            startRatio={0.1}
+            startRatio={0.3}
             endRatio={0.7}
             scrollHeight={visibleSections?.[0]["project"]?.sectionHeight}
             scrollY={visibleSections?.[0]["project"]?.scrollPosition}
           >
-            <ServiceDesk />
+            <div className="w-full flex gap-c-gap-md">
+              <ProjectImage
+                href="/detail/myPjt"
+                title="포트폴리오"
+                src="/images/myPJT.png"
+                width="55%"
+              />
+              <ProjectImage
+                href="/detail/nsd"
+                title="서비스데스크"
+                src="/images/nsd-1.png"
+                width="45%"
+              />
+            </div>
           </ComopnentScrollGroup>
           <ComopnentScrollGroup
-            startRatio={0.1}
+            startRatio={0.5}
             endRatio={0.8}
             scrollHeight={visibleSections?.[0]["project"]?.sectionHeight}
             scrollY={visibleSections?.[0]["project"]?.scrollPosition}
           >
-            <Nci />
+            <div className="w-full flex gap-c-gap-md">
+              <ProjectImage
+                href="/detail/nci"
+                title="장애관리시스템"
+                src="/images/nci-1.png"
+                width="45%"
+              />
+              <ProjectImage
+                href="/detail/giggy"
+                title="호주 구인구직 프로젝트"
+                src="/images/giggy/main.png"
+                width="55%"
+              />
+            </div>
           </ComopnentScrollGroup>
         </div>
       </div>

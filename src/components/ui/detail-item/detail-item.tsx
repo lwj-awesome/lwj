@@ -8,7 +8,7 @@ export function Detail({
   className,
 }: CommonComponentsProps & { className?: string }) {
   return (
-    <div className={clsx(`flex flex-col gap-c-gap-lg my-10`, className)}>
+    <div className={clsx(`flex flex-col gap-c-gap-lg my-10 `, className)}>
       {children}
     </div>
   );

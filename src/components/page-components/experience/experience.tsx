@@ -13,7 +13,6 @@ export default function Experience({
     <>
       <div className="p-2 w-full">
         <div className="lg:grid lg:grid-cols-[1fr_2fr] lg:gap-6  rounded-c-border-radius ">
-          {/* 1. Career History */}
           <div className="lg:bg-c-box-layout-color lg:p-c-padding-md rounded-c-border-radius lg:my-auto">
             <ComopnentScrollGroup
               startRatio={0}
@@ -52,9 +51,7 @@ export default function Experience({
             </ComopnentScrollGroup>
           </div>
 
-          {/* 4. Bottom Section: Summary + Stack */}
           <div className="lg:grid lg:grid-rows-1 ">
-            {/* 3. Introduction Card */}
             <ComopnentScrollGroup
               startRatio={0.3}
               endRatio={0.75}
@@ -81,7 +78,6 @@ export default function Experience({
                   </Text.subTitle>
                 </Box>
               </div>
-              {/* Stack */}
               <div className="hidden lg:block rounded-c-border-radius p-c-padding bg-c-box-layout-color ">
                 <BlurMarquee className="lg:w-[720px] " />
               </div>
