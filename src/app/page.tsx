@@ -25,7 +25,8 @@ export default function Home() {
   const visibleSections = useVisibleSections(sections);
 
   const scrollToSection = (ref: React.RefObject<HTMLDivElement | null>) => {
-    return () => ref.current?.scrollIntoView({ behavior: "smooth" });
+    return () =>
+      ref.current?.scrollIntoView({ behavior: "smooth", block: "end" });
   };
 
   return (
