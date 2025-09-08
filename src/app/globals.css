@@ -105,7 +105,6 @@
     }
   }
 
-  /* induce-scroll arrows */
   --animate-motion: motion 1s ease-out infinite;
   @keyframes motion {
     25% {
