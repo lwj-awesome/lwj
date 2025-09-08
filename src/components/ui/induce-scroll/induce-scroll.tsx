@@ -1,24 +1,13 @@
-import Image from "next/image";
-import styles from "./induce-scroll.module.css";
-
 export default function InduceScroll() {
   return (
-    <div className={styles.induceScroll}>
-      <div className={styles.arrow_div}>
-        <Image
-          className={styles.arrow_first}
-          src="https://i.ibb.co/BTbSmBS/1.png"
-          alt="arrow"
-          width={20}
-          height={10}
-        />
-        <Image
-          className={styles.arrow_second}
-          src="https://i.ibb.co/BTbSmBS/1.png"
-          alt="arrow"
-          width={20}
-          height={10}
-        />
+    <div className="flex justify-center items-center h-screen ">
+      <div className="flex flex-col gap-2">
+        <div className="animate-motion">
+          <span className="block w-3 h-3 border-r-2 border-b-2  rotate-45" />
+        </div>
+        <div className="animate-motion [animation-delay:1s] opacity-0">
+          <span className="block w-3 h-3 border-r-2 border-b-2  rotate-45" />
+        </div>
       </div>
     </div>
   );
