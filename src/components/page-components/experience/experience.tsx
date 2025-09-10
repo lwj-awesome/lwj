@@ -32,14 +32,14 @@ export default function Experience({
                 </div>
               </Box>
               <Box colorType="box" className="flex flex-row justify-between  ">
-                <Text.subTitle>14 / 3 - 21 - 2</Text.subTitle>
+                <Text.subTitle>21 / 03 ~ 22 / 01</Text.subTitle>
                 <div className="flex flex-col items-end gap-c-gap-md">
                   <Text.subTitle>SSAFY</Text.subTitle>
                   <Text.description>삼성 소프트웨어 아카데미</Text.description>
                 </div>
               </Box>
               <Box colorType="box" className="flex flex-row justify-between">
-                <Text.subTitle>14 / 3 - 21 - 2</Text.subTitle>
+                <Text.subTitle>14 / 03 ~ 21 / 02</Text.subTitle>
                 <div className="flex flex-col items-end gap-c-gap-md">
                   <Text.subTitle>강릉원주대학교</Text.subTitle>
                   <Text.description>전기공학부</Text.description>
@@ -69,9 +69,9 @@ export default function Experience({
                 >
                   <Text.title>LEE WON JONG</Text.title>
                   <Text.subTitle>
-                    프론트엔드 개발 4년차로, React와 Next.js, Flutter를 활용해
-                    사용자 경험 중심의 웹·앱 서비스를 만듭니다. 사람들이 제가
-                    만든 서비스에서 즐겁고 편리한 경험을 하길 바랍니다.
+                    프론트엔드 개발 4년차로, React와 Next.js 활용해 사용자 경험
+                    중심의 서비스를 만듭니다. 사람들이 제가 만든 서비스에서
+                    즐겁고 편리한 경험을 하길 바랍니다.
                   </Text.subTitle>
                 </Box>
               </div>
