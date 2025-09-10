@@ -1,12 +1,13 @@
 "use client";
 import { useRef } from "react";
-import Header from "@/components/ui/header/header";
-import InduceScroll from "@/components/ui/induce-scroll/induce-scroll";
+import { Header, InduceScroll } from "@/components/ui";
 import { useVisibleSections } from "@/hooks/useVisibleSections";
-import Experience from "@/components/page-components/experience/experience";
-import { Intro } from "@/components/page-components/intro/intro";
-import MyPicture from "@/components/page-components/my-picture/my-picture-intro";
-import Project from "@/components/page-components/project/project";
+import {
+  Experience,
+  Intro,
+  MyPicture,
+  Project,
+} from "@/components/page-components";
 
 export default function Home() {
   const introRef = useRef<HTMLDivElement | null>(null);

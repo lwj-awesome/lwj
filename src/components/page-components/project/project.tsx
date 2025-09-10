@@ -1,8 +1,8 @@
-import ComopnentScrollGroup from "@/components/scroll/components-scroll";
+import { ComponentScrollGroup as ComopnentScrollGroup } from "@/components/scroll";
 import { VisibleSectionsProps } from "@/types/types";
-import Text from "../../atom/text-module/text-module";
+import { Text } from "@/components/ui";
 
-import { ProjectImage } from "@/components/ui/pjt-image/pjt-image";
+import { ProjectImage } from "@/components/ui";
 
 export default function Project({
   visibleSections,

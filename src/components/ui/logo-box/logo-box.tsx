@@ -1,5 +1,4 @@
-import { Box } from "@/components/atom/box/box-layout";
-import Text from "@/components/atom/text-module/text-module";
+import { Box, Text } from "@/components/ui";
 import { LogoType } from "@/types/types";
 import clsx from "clsx";
 import Image from "next/image";

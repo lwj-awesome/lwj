@@ -1,8 +1,6 @@
-import ComopnentScrollGroup from "@/components/scroll/components-scroll";
+import { ComponentScrollGroup as ComopnentScrollGroup } from "@/components/scroll";
 import { VisibleSectionsProps } from "@/types/types";
-import Text from "../../atom/text-module/text-module";
-import { Box } from "@/components/atom/box/box-layout";
-import { ColorDot } from "@/components/atom/color-dot";
+import { Text, Box, ColorDot } from "@/components/ui";
 import Image from "next/image";
 
 export default function MyPicture({
@@ -69,12 +67,7 @@ export default function MyPicture({
               src="/images/me.JPG"
               width={300}
               height={300}
-              style={{
-                objectFit: "cover",
-                width: "100%",
-                height: "100%",
-                borderRadius: "var(--radius-c-border-radius)",
-              }}
+              className="object-cover w-full h-full rounded-c-border-radius"
             />
           </Box>
         </ComopnentScrollGroup>

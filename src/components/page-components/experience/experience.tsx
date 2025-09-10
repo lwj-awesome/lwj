@@ -1,9 +1,6 @@
-import ComopnentScrollGroup from "@/components/scroll/components-scroll";
+import { ComponentScrollGroup as ComopnentScrollGroup } from "@/components/scroll";
 import { VisibleSectionsProps } from "@/types/types";
-import { Box } from "@/components/atom/box/box-layout";
-import Text from "@/components/atom/text-module/text-module";
-import { BlurMarquee } from "@/components/ui/marquee/marquee";
-
+import { Text, BlurMarquee, Box } from "@/components/ui";
 export default function Experience({
   visibleSections,
 }: {

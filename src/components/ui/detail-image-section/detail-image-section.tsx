@@ -12,12 +12,7 @@ export default function ImageSection({ images }: { images: string[] }) {
             height={800}
             src={images[0]}
             alt=""
-            style={{
-              objectFit: "cover",
-              width: "100%",
-              height: "100%",
-              borderRadius: "var(--radius-c-border-radius)",
-            }}
+            className="object-cover w-full h-full rounded-c-border-radius"
           />
         </div>
       </div>
@@ -32,12 +27,7 @@ export default function ImageSection({ images }: { images: string[] }) {
               height={400}
               src={src}
               alt=""
-              style={{
-                objectFit: "cover",
-                width: "100%",
-                height: "100%",
-                borderRadius: "var(--radius-c-border-radius)",
-              }}
+              className="object-cover w-full h-full rounded-c-border-radius"
             />
           </div>
         ))}

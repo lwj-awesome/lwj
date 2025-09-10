@@ -1,5 +1,4 @@
-import FadeText from "@/components/scroll/fade-text";
-import SideFadeText from "@/components/scroll/side-fade-text";
+import { FadeText, SideFadeText } from "@/components/scroll";
 import { VisibleSectionsProps } from "@/types/types";
 
 export function Intro({

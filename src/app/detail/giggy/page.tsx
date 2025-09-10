@@ -1,8 +1,8 @@
 import { BlurMarquee } from "@/components/ui/marquee/marquee";
-import { Detail } from "@/components/ui/detail-item/detail-item";
+import { Detail, ImageSection } from "@/components/ui";
 import { LogoType } from "@/types/types";
 import { DescriptionPart } from "@/components/ui/detail-description/detail-description";
-import ImageSection from "@/components/ui/detail-image-section/detail-image-section";
+import { LEARN, MAIN, MATCHING, PROFILE, REGIST } from "@/content/detail/giggy";
 
 export default function Page() {
   const exceptSkill: LogoType[] = ["MFA", "React-query", "Recoil"];
@@ -17,7 +17,7 @@ export default function Page() {
     "/images/giggy/chat-1.png",
   ];
   return (
-    <>
+    <main>
       <Detail>
         <Detail.title>Giggy project</Detail.title>
       </Detail>
@@ -35,81 +35,6 @@ export default function Page() {
 
       <DescriptionPart title="Learn" content={LEARN} />
       <BlurMarquee exceptSkill={exceptSkill} />
-    </>
+    </main>
   );
 }
-const MAIN = [
-  {
-    key: 1,
-    subTitle: "프로젝트 소개: Giggy - 호주 구인구직의 새로운 시작",
-    text: "호주 현지 친구들과의 협력을 통해, 호주 내 구인구직 과정을 더욱 효율적이고 쉽게 만들고자 Giggy 프로젝트를 시작했습니다. 현재 Next.js App Router를 기반으로 활발히 개발 중이며, 호주 현지 환경에 최적화된 사용자 경험을 제공하기 위해 노력하고 있습니다.",
-  },
-];
-const REGIST = [
-  {
-    key: 1,
-    subTitle: "구인 등록 페이지",
-    text: "일자리를 찾는 구직자들에게 기회를 제공하는 페이지입니다. 구인자는 이곳에서 간단한 절차를 통해 필요한 인력을 모집할 수 있습니다.",
-  },
-  {
-    key: 2,
-    subTitle: "",
-    text: "간편한 구인자 모집: 구인 정보를 쉽고 빠르게 등록하여 원하는 구직자를 찾을 수 있습니다.",
-  },
-  {
-    key: 3,
-    subTitle: "",
-    text: "직관적인 지도 기반 위치 안내: 일할 장소를 지도로 명확하게 표시하여 구직자가 위치를 한눈에 파악할 수 있도록 돕습니다.",
-  },
-];
-const PROFILE = [
-  {
-    key: 1,
-    subTitle: "프로필 페이지",
-    text: "사용자 본인의 모든 것을 한눈에 관리할 수 있는 개인화된 공간입니다. 여기에서 기본 정보를 편리하게 저장하고, 앱 사용의 핵심적인 요소들을 한곳에서 확인할 수 있습니다.",
-  },
-  {
-    key: 2,
-    subTitle: "",
-    text: "현재 진행 중인 일자리 매칭 현황은 물론, 중요한 일정들을 확인할 수 있습니다.",
-  },
-  {
-    key: 3,
-    subTitle: "",
-    text: "필요에 따라 앱 환경을 개인에게 최적화할 수 있도록 다양한 설정 옵션을 제공합니다.",
-  },
-];
-const MATCHING = [
-  {
-    key: 1,
-    subTitle: "매칭 페이지",
-    text: "구인자와 구직자 간의 일자리 연결 현황을 한눈에 파악하고, 원활한 소통을 돕는 핵심 공간입니다.",
-  },
-  {
-    key: 2,
-    subTitle: "",
-    text: "직관적인 매칭 상태 확인, 간단한 컬러 닷을 통해 매칭의 성공 여부, 진행 중인 상태, 그리고 실패 여부를 즉시 확인할 수 있습니다.",
-  },
-  {
-    key: 3,
-    subTitle: "",
-    text: "자유로운 협의를 위한 채팅, 구인자와 구직자는 매칭된 일자리에 대해 자유롭게 채팅하며 세부 사항을 협의하고 조율할 수 있습니다.",
-  },
-];
-const LEARN = [
-  {
-    key: 1,
-    subTitle: "프로젝트 전체를 경험하다",
-    text: "아무것도 없는 상태에서 시작한 프로젝트를 통해 정말 많은 걸 배웠습니다. 호주에 살고 있는 친구들이 이런 서비스가 호주에 없는데, 있으면 좋겠다는 간단한 생각으로 시작해, 정해진 틀이 없는 상황에서 처음부터 하나씩 만들어가며 서비스를 개발하는 전체 과정을 경험할 수있었습니다.",
-  },
-  {
-    key: 2,
-    subTitle: "",
-    text: "호주에서 함께 기획한 팀원들이 타일공, 간호사같이 기획 전문가가 아닌 각자 다른 일을 하는 사람들이었습니다. 전문가가 아닌 이들과 소통하고 협업하는 것이 쉽지 않았지만, 기술적인 설명과 전체적으로 모든 것들이 논리적으로 이어져야하는 이유 등을 설명하며 잘 헤쳐나갔던것 같습니다. 이런 경험이 실무에서 여러 타입의 기획자들과 일할 때도 큰 도움이 될 것 같습니다. 또한, 기획 과정에 직접 깊게 참여해보니, 기획이 정말 어렵고 복잡한 일이라는 걸 알게 됐습니다. 이를통해 기획자의 입장을 좀 더 이해할 수 있게 되었습니다.",
-  },
-  {
-    key: 3,
-    subTitle: "",
-    text: "기능 추가와 정책 개발 업무를 하면서 진짜 문제가 뭘까?, 어떻게 해결할까? 를 끊임없이 고민했습니다. 크고 작은 의사결정을 내려야 하는 순간들이 많았는데, 이런 경험들이 쌓여 문제 해결과 의사결정 역량을 기르는 데 도움이 되었습니다.",
-  },
-];

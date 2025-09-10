@@ -1,4 +1,4 @@
-import Text from "@/components/atom/text-module/text-module";
+import { Text } from "@/components/ui";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -13,12 +13,7 @@ export function ProjectImage({ href, title, src }: ProjectImageType) {
           height={300}
           alt=""
           src={src}
-          style={{
-            objectFit: "cover",
-            width: "100%",
-            height: "100%",
-            borderRadius: "var(--radius-c-border-radius)",
-          }}
+          className="object-cover w-full h-full rounded-c-border-radius"
         />
       </div>
       <Text.subTitle>{title}</Text.subTitle>

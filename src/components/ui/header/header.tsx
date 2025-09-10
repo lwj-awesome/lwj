@@ -1,10 +1,10 @@
 "use client";
 import Link from "next/link";
-import Text from "../../atom/text-module/text-module";
-import ThemeToggleButton from "../../atom/toggle-button/toggle-button";
+import { Text } from "@/components/ui";
+import ThemeToggleButton from "../toggle-button/toggle-button";
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import { Box } from "@/components/atom/box/box-layout";
+import { Box } from "@/components/ui";
 import clsx from "clsx";
 
 interface HeaderProps {

@@ -1,15 +1,11 @@
-import Text from "@/components/atom/text-module/text-module";
+import Text from "@/components/ui/text-module/text-module";
 import { Detail } from "../detail-item/detail-item";
-import { ColorDot } from "@/components/atom/color-dot";
+import { ColorDot } from "@/components/ui/color-dot";
+import { ContentProps } from "@/types/types";
 
 interface DetailDescProps {
   title: string;
-  content: {
-    text: string;
-    key: number;
-    hilight?: string;
-    subTitle?: string;
-  }[];
+  content: ContentProps[];
   className?: string;
 }
 export function DescriptionPart({
@@ -29,7 +25,7 @@ export function DescriptionPart({
               </div>
             )}
             <Text.subDesc>
-              <ColorDot>{item.hilight}</ColorDot> {item.text}
+              <ColorDot>{item.highlight}</ColorDot> {item.text}
             </Text.subDesc>
           </div>
         ))}
