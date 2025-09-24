@@ -1,7 +1,8 @@
-import { BlurMarquee, Text, Detail } from "@/components/ui";
+import { BlurMarquee, Text, Detail, ColorDot } from "@/components/ui";
 import { LogoType } from "@/types/types";
 import { DescriptionPart } from "@/components/ui/detail-description/detail-description";
 import { DETAIL_SECTIONS } from "@/content/detail/mypjt";
+import Link from "next/link";
 
 function MyPjtDescription() {
   return (
@@ -60,6 +61,11 @@ export default function Page() {
             프로젝트에서 배운 것들을 다음 프로젝트에 더 발전된 형태로 적용해
             나가며 지속적으로 성장하는 개발자가 되겠습니다.
           </Text.subDesc>
+          <ColorDot>
+            <Link href={"https://github.com/lwj-awesome/lwj"} target="_blank">
+              Github
+            </Link>
+          </ColorDot>
         </Detail.desc>
       </Detail>
       <MyPjtDescription />
