@@ -36,7 +36,7 @@ function HomeHeader({
 function DetailHeader() {
   return (
     <Link href={"/"}>
-      <Text as="h3" size="lg" weight="medium">
+      <Text as="h3" size="base" weight="medium">
         HOME
       </Text>
     </Link>
@@ -77,7 +77,13 @@ export default function Header({
           `w-[50vw] h-[80px]  flex justify-around items-center sm:px-[30px] sm:gap-c-gap-lg`
         )}
       >
-        <Image width={80} height={80} src="/images/logo.png" alt="" />
+        <Image
+          width={80}
+          height={80}
+          src="/images/logo.png"
+          alt=""
+          className="w-[60px] h-[60px] md:w-20 md:h-20"
+        />
         <div className="hidden xl:flex xl:flex-row   lg:gap-c-gap-xxl ">
           {isHome ? (
             <HomeHeader

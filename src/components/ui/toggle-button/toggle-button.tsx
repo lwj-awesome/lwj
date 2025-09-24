@@ -19,11 +19,11 @@ export default function ThemeToggleButton() {
   return (
     <button onClick={toggleTheme} className="lg:px-4 py-2 cursor-pointer">
       {theme === "dark" ? (
-        <div className="relative w-[40px] h-[40px]">
+        <div className="relative md:w-[40px] md:h-[40px] w-[32px] h-[32px] ">
           <Image fill src="/images/lightmode.png" alt="라이트 모드로 변경" />
         </div>
       ) : (
-        <div className="relative w-[40px] h-[40px]">
+        <div className="relative md:w-[40px] md:h-[40px] w-[32px] h-[32px]">
           <Image fill src="/images/darkmode.png" alt="다크 모드로 변경" />
         </div>
       )}
