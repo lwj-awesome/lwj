@@ -1,4 +1,4 @@
-import { ComponentScrollGroup as ComopnentScrollGroup } from "@/components/scroll";
+import { ComponentScrollGroup as ComponentScrollGroup } from "@/components/scroll";
 import { VisibleSectionsProps } from "@/types/types";
 import { Text, BlurMarquee, Box } from "@/components/ui";
 export default function Experience({
@@ -11,7 +11,7 @@ export default function Experience({
       <div className="p-2 w-full">
         <div className="lg:grid lg:grid-cols-[1fr_2fr] lg:gap-6  rounded-c-border-radius ">
           <div className="lg:bg-c-box-layout-color lg:p-c-padding-md rounded-c-border-radius lg:my-auto">
-            <ComopnentScrollGroup
+            <ComponentScrollGroup
               startRatio={0}
               endRatio={0.4}
               scrollHeight={visibleSections?.[0]["experience"]?.sectionHeight}
@@ -45,11 +45,11 @@ export default function Experience({
                   <Text.description>전기공학부</Text.description>
                 </div>
               </Box>
-            </ComopnentScrollGroup>
+            </ComponentScrollGroup>
           </div>
 
           <div className="lg:grid lg:grid-rows-1 ">
-            <ComopnentScrollGroup
+            <ComponentScrollGroup
               startRatio={0.3}
               endRatio={0.75}
               scrollHeight={visibleSections?.[0]["experience"]?.sectionHeight}
@@ -78,7 +78,7 @@ export default function Experience({
               <div className="hidden lg:block rounded-c-border-radius p-c-padding bg-c-box-layout-color ">
                 <BlurMarquee className="lg:w-[720px] " />
               </div>
-            </ComopnentScrollGroup>
+            </ComponentScrollGroup>
           </div>
         </div>
       </div>

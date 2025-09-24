@@ -3,7 +3,7 @@ interface CalculateScrollProps {
   end: number[];
 }
 
-const calculateScroll = (
+export const calculateScroll = (
   scrollY: number,
   height: number,
   values: CalculateScrollProps
@@ -24,5 +24,3 @@ const calculateScroll = (
     values.start[1]
   );
 };
-
-export { calculateScroll };

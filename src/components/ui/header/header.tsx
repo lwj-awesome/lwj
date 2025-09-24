@@ -55,16 +55,13 @@ export default function Header({
   useEffect(() => {
     const handleScroll = () => {
       const currentY = window.scrollY;
-
       if (currentY > lastScrollY) {
         setShowHeader(false);
       } else {
         setShowHeader(true);
       }
-
       setLastScrollY(currentY);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
@@ -92,7 +89,6 @@ export default function Header({
             <DetailHeader />
           )}
         </div>
-        {/* mobile */}
         <div className="flex flex-row items-center  xl:hidden">
           {isHome ? (
             <div onClick={moveToIntro}>

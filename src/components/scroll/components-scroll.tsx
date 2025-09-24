@@ -1,7 +1,7 @@
 import { calculateScroll } from "@/utils/utils";
 import React from "react";
 
-interface ComopnentScrollGroupProps {
+interface ComponentScrollGroupProps {
   startRatio: number;
   endRatio: number;
   children: React.ReactNode;
@@ -9,13 +9,13 @@ interface ComopnentScrollGroupProps {
   scrollY: number;
 }
 
-export default function ComopnentScrollGroup({
+export default function ComponentScrollGroup({
   children,
   endRatio,
   scrollHeight,
   scrollY,
   startRatio,
-}: ComopnentScrollGroupProps) {
+}: ComponentScrollGroupProps) {
   const childrenCount = React.Children.count(children);
   const childrenStyles:
     | (React.CSSProperties | undefined)[]

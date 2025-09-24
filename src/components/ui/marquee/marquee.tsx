@@ -1,9 +1,9 @@
 /* Tailwind version */
 import { LogoBox } from "../logo-box/logo-box";
-import { logoList } from "@/constant/constant";
 import { LogoType } from "@/types/types";
 import { Text } from "@/components/ui";
 import clsx from "clsx";
+import { logoList } from "@/content/marquee/marquee";
 
 export default function Marquee({
   direction = "left",

@@ -45,12 +45,16 @@ export default function MyPicture({
           >
             <div className="hidden sm:hidden md:flex md:flex-col md:gap-c-gap-md md:items-center">
               <Text.description>
-                저는 사용자에게 도움이 되는 개발을 하고 싶습니다. 사람들이 제가
-                만든 웹사이트를 쓰면서 즐거워지는게 제 목표입니다
+                저는 사람들이 제가 만든 웹사이트를 사용하며 편리함과 즐거움을
+                느낄 수 있도록 하는 것을 목표로 합니다.
               </Text.description>
               <Text.description>
-                이러한 개발자가 되기 위해 프론트엔드 기술 학습에 끊임없이
-                노력하고 있습니다.
+                단순히 기능을 구현하는 것을 넘어서, 사용자의 경험을 최우선으로
+                생각하며 개발합니다.
+              </Text.description>
+              <Text.description>
+                이러한 목표를 달성하기 위해 프론트엔드 기술 학습에 지속적으로
+                매진하고 있으며, 항상 사용자의 관점에서 생각하려 노력합니다.
               </Text.description>
             </div>
           </ComopnentScrollGroup>
