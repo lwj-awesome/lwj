@@ -18,8 +18,8 @@ export default function Marquee({
         className={clsx(
           "flex flex-row gap-c-gap-xxl text-[3rem] will-change-transform",
           direction === "left"
-            ? "[animation:scroll-left_40s_linear_infinite] md:[animation:scroll-left_40s_linear_infinite]"
-            : "[animation:scroll-right_40s_linear_infinite] md:[animation:scroll-right_40s_linear_infinite]"
+            ? "[animation:scroll-left_10s_linear_infinite] md:[animation:scroll-left_40s_linear_infinite]"
+            : "[animation:scroll-right_10s_linear_infinite] md:[animation:scroll-right_40s_linear_infinite]"
         )}
       >
         {logoList.map((item) => (

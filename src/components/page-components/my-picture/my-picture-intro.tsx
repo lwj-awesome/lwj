@@ -54,7 +54,10 @@ export default function MyPicture({
               </Text.description>
               <Text.description>
                 이러한 목표를 달성하기 위해 프론트엔드 기술 학습에 지속적으로
-                매진하고 있으며, 항상 사용자의 관점에서 생각하려 노력합니다.
+                매진하고 있으며,
+              </Text.description>
+              <Text.description>
+                항상 사용자의 관점에서 생각하려 노력합니다.
               </Text.description>
             </div>
           </ComopnentScrollGroup>
