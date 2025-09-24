@@ -26,12 +26,12 @@
 }
 @media (max-width: 767px) {
   .size_2xl {
-    font-size: var(--font-size-xl);
+    font-size: var(--font-size-2xl);
   }
 }
 @media (max-width: 1235px) {
   .size_2xl {
-    font-size: var(--font-size-1-5xl);
+    font-size: var(--font-size-xl);
   }
 }
 
