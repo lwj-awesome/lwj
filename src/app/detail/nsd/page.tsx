@@ -2,9 +2,7 @@ import { BlurMarquee, Text, Detail } from "@/components/ui";
 import { ColorDot } from "@/components/ui/color-dot";
 import { LogoType } from "@/types/types";
 import { DescriptionPart } from "@/components/ui/detail-description/detail-description";
-import { CHECK_DATA } from "@/content/detail/nci";
-import { KEY_POINT } from "@/content/detail/nsd";
-import { LEARN } from "@/content/detail/giggy";
+import { KEY_POINT, LEARN, CHECK_DATA } from "@/content/detail/nsd";
 
 export default function Page() {
   const exceptSkill: LogoType[] = ["Next.js", "Tailwind Css", "MFA"];
